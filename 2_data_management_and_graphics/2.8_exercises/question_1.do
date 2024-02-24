@@ -1,13 +1,3 @@
-/*==============================================================================
-	- Author:      JrProCode 
-	- Email:       rolyordonezleon@gmail.com     
-	- Book:        Microeconometrics Using Stata    
-	- Topic:       Exercise 1
-	- Date:        16 de abril de 2023
-	- Version:     Stata 16
-==============================================================================*/
-
-
 /*=============================
 	Limpiar el entorno de trabajo
 =============================*/

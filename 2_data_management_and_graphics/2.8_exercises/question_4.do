@@ -1,13 +1,3 @@
-/*==============================================================================
-	- Author:      JrProCode 
-	- Email:       rolyordonezleon@gmail.com     
-	- Book:        Microeconometrics Using Stata    
-	- Topic:       Exercise 3
-	- Date:        24 de mayo de 2023
-	- Version:     Stata 16
-==============================================================================*/
-
-
 /*=============================
 	Limpiar el entorno de trabajo
 =============================*/
@@ -21,12 +11,12 @@
 =============*/
 	* Ruta de trabajo
 	pwd
-	global root "D:\econometria\camero_trivedi_1"
+	global root "D:\master\microeconometrics\2_data_management_and_graphics\2.8_exercises"
 	pwd
-	cd "${root}\data"
+	cd "$root"
 	
 	* Importar la data "mus202psid92m.dta"
-	use "mus202psid92m.dta"
+	use "mus202psid92m.dta", clear 
 	d 
 	* Graficar
 	graph twoway scatter lnearns hours 

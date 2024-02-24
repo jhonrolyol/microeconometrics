@@ -1,13 +1,3 @@
-/*==============================================================================
-	- Author:      JrProCode 
-	- Email:       rolyordonezleon@gmail.com     
-	- Book:        Microeconometrics Using Stata    
-	- Topic:       Exercise 2
-	- Date:        16 de abril de 2023
-	- Version:     Stata 16
-==============================================================================*/
-
-
 /*=============================
 	Limpiar el entorno de trabajo
 =============================*/
@@ -47,8 +37,8 @@
 
 	// path 
 	pwd
-	global do_files "D:\econometria\camero_trivedi_1\chapter_2\do_files"
-	cd "$do_files"
+	global root "D:\master\microeconometrics\2_data_management_and_graphics\2.8_exercises"
+	cd "$root"
 	pwd 
 	
 	// import data "data.csv"
@@ -70,7 +60,7 @@
 	import delimited using "data_modified.txt", clear
 	list
 
-	clear
-	infix age 1-2 name 4-10 income 12-19 female 21
-	list
+	*clear
+	*infix age 1-2 name 4-10 income 12-19 female 21
+	*list
 	
