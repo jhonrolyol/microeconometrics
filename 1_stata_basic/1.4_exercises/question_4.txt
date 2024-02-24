@@ -1,0 +1,825 @@
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\econometria\camero_trivedi_1\chapter_1\do_files\question_4.txt
+  log type:  text
+ opened on:  13 Apr 2023, 07:01:10
+
+.         
+.         use "auto.dta", clear   
+(1978 Automobile Data)
+
+.         
+.         /*===============
+>                 Regress
+>         ================*/
+.                 codebook mpg
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+mpg                                                                                                                                                                 Mileage (mpg)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+                  type:  numeric (int)
+
+                 range:  [12,41]                      units:  1
+         unique values:  21                       missing .:  0/74
+
+                  mean:   21.2973
+              std. dev:    5.7855
+
+           percentiles:        10%       25%       50%       75%       90%
+                                14        18        20        25        29
+
+.                 codebook price
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+price                                                                                                                                                                       Price
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+                  type:  numeric (int)
+
+                 range:  [3291,15906]                 units:  1
+         unique values:  74                       missing .:  0/74
+
+                  mean:   6165.26
+              std. dev:    2949.5
+
+           percentiles:        10%       25%       50%       75%       90%
+                              3895      4195    5006.5      6342     11385
+
+.                 codebook weight 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+weight                                                                                                                                                              Weight (lbs.)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+                  type:  numeric (int)
+
+                 range:  [1760,4840]                  units:  10
+         unique values:  64                       missing .:  0/74
+
+                  mean:   3019.46
+              std. dev:   777.194
+
+           percentiles:        10%       25%       50%       75%       90%
+                              2020      2240      3190      3600      4060
+
+.                 
+.                 regress mpg price weight
+
+      Source |       SS           df       MS      Number of obs   =        74
+-------------+----------------------------------   F(2, 71)        =     66.85
+       Model |  1595.93249         2  797.966246   Prob > F        =    0.0000
+    Residual |  847.526967        71  11.9369995   R-squared       =    0.6531
+-------------+----------------------------------   Adj R-squared   =    0.6434
+       Total |  2443.45946        73  33.4720474   Root MSE        =     3.455
+
+------------------------------------------------------------------------------
+         mpg |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       price |  -.0000935   .0001627    -0.57   0.567     -.000418    .0002309
+      weight |  -.0058175   .0006175    -9.42   0.000    -.0070489   -.0045862
+       _cons |   39.43966   1.621563    24.32   0.000     36.20635    42.67296
+------------------------------------------------------------------------------
+
+. 
+.                 *scalar r2 = e(r2)
+.                 *display "R cuadrado (r2): " r2
+.                 
+.                 *scalar r2adj = e(r2) - (1 - e(r2))*(3-1)/(e(N) - 3)
+.                 *display "R cuadrado ajustado (r2adj): " r2adj
+.                 
+.                 // return list (scalars): 
+.                         e(N) 
+N not found
+r(111);
+
+end of do-file
+
+r(111);
+
+. do "C:\Users\PC\AppData\Local\Temp\STDb6c_000000.tmp"
+
+.                 regress mpg price weight
+
+      Source |       SS           df       MS      Number of obs   =        74
+-------------+----------------------------------   F(2, 71)        =     66.85
+       Model |  1595.93249         2  797.966246   Prob > F        =    0.0000
+    Residual |  847.526967        71  11.9369995   R-squared       =    0.6531
+-------------+----------------------------------   Adj R-squared   =    0.6434
+       Total |  2443.45946        73  33.4720474   Root MSE        =     3.455
+
+------------------------------------------------------------------------------
+         mpg |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       price |  -.0000935   .0001627    -0.57   0.567     -.000418    .0002309
+      weight |  -.0058175   .0006175    -9.42   0.000    -.0070489   -.0045862
+       _cons |   39.43966   1.621563    24.32   0.000     36.20635    42.67296
+------------------------------------------------------------------------------
+
+.                         
+.                 *scalar r2 = e(r2)
+.                 *display "R cuadrado (r2): " r2
+.                 
+.                 *scalar r2adj = e(r2) - (1 - e(r2))*(3-1)/(e(N) - 3)
+.                 *display "R cuadrado ajustado (r2adj): " r2adj
+.                 
+.                 // return list (scalars): 
+.                         scalar e(N) 
+varlist not allowed
+r(101);
+
+end of do-file
+
+r(101);
+
+. do "C:\Users\PC\AppData\Local\Temp\STDb6c_000000.tmp"
+
+.                 regress mpg price weight
+
+      Source |       SS           df       MS      Number of obs   =        74
+-------------+----------------------------------   F(2, 71)        =     66.85
+       Model |  1595.93249         2  797.966246   Prob > F        =    0.0000
+    Residual |  847.526967        71  11.9369995   R-squared       =    0.6531
+-------------+----------------------------------   Adj R-squared   =    0.6434
+       Total |  2443.45946        73  33.4720474   Root MSE        =     3.455
+
+------------------------------------------------------------------------------
+         mpg |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       price |  -.0000935   .0001627    -0.57   0.567     -.000418    .0002309
+      weight |  -.0058175   .0006175    -9.42   0.000    -.0070489   -.0045862
+       _cons |   39.43966   1.621563    24.32   0.000     36.20635    42.67296
+------------------------------------------------------------------------------
+
+.                         
+.                 *scalar r2 = e(r2)
+.                 *display "R cuadrado (r2): " r2
+.                 
+.                 *scalar r2adj = e(r2) - (1 - e(r2))*(3-1)/(e(N) - 3)
+.                 *display "R cuadrado ajustado (r2adj): " r2adj
+.                 
+.                 // return list (scalars): 
+.                         display e(N) 
+74
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STDb6c_000000.tmp"
+
+.                 regress mpg price weight
+
+      Source |       SS           df       MS      Number of obs   =        74
+-------------+----------------------------------   F(2, 71)        =     66.85
+       Model |  1595.93249         2  797.966246   Prob > F        =    0.0000
+    Residual |  847.526967        71  11.9369995   R-squared       =    0.6531
+-------------+----------------------------------   Adj R-squared   =    0.6434
+       Total |  2443.45946        73  33.4720474   Root MSE        =     3.455
+
+------------------------------------------------------------------------------
+         mpg |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       price |  -.0000935   .0001627    -0.57   0.567     -.000418    .0002309
+      weight |  -.0058175   .0006175    -9.42   0.000    -.0070489   -.0045862
+       _cons |   39.43966   1.621563    24.32   0.000     36.20635    42.67296
+------------------------------------------------------------------------------
+
+.                         
+.                 *scalar r2 = e(r2)
+.                 *display "R cuadrado (r2): " r2
+.                 
+.                 *scalar r2adj = e(r2) - (1 - e(r2))*(3-1)/(e(N) - 3)
+.                 *display "R cuadrado ajustado (r2adj): " r2adj
+.                 
+.                 // return list (scalars): 
+.                         display e(N) 
+74
+
+.                         display e(rmse)
+3.4549963
+
+.                         display e(r2)
+.65314466
+
+.                         display e(mss)
+1595.9325
+
+.                         display e(df)
+.
+
+.                         display e(Ftest)
+.
+
+.                         display e(ll_0)
+-234.39434
+
+.                         display e(ll)
+-195.21698
+
+.                         display e(ic_0)
+.
+
+.                         display e(ic) 
+.
+
+.                         display e(rank)
+3
+
+.                         display e(k_eq_1) 
+.
+
+.                         display e(k_omitted) 
+.
+
+.                         display e(k_missing) 
+.
+
+.                         display e(k_differs)
+.
+
+.                         *e(cmd) =  regress
+.                         
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STDb6c_000000.tmp"
+
+.                 regress mpg price weight
+
+      Source |       SS           df       MS      Number of obs   =        74
+-------------+----------------------------------   F(2, 71)        =     66.85
+       Model |  1595.93249         2  797.966246   Prob > F        =    0.0000
+    Residual |  847.526967        71  11.9369995   R-squared       =    0.6531
+-------------+----------------------------------   Adj R-squared   =    0.6434
+       Total |  2443.45946        73  33.4720474   Root MSE        =     3.455
+
+------------------------------------------------------------------------------
+         mpg |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       price |  -.0000935   .0001627    -0.57   0.567     -.000418    .0002309
+      weight |  -.0058175   .0006175    -9.42   0.000    -.0070489   -.0045862
+       _cons |   39.43966   1.621563    24.32   0.000     36.20635    42.67296
+------------------------------------------------------------------------------
+
+.                         
+.                 *scalar r2 = e(r2)
+.                 *display "R cuadrado (r2): " r2
+.                 
+.                 *scalar r2adj = e(r2) - (1 - e(r2))*(3-1)/(e(N) - 3)
+.                 *display "R cuadrado ajustado (r2adj): " r2adj
+.                 
+.                 // return list (scalars): 
+.                         display e(N) 
+74
+
+.                         display e(rmse)
+3.4549963
+
+.                         display e(r2)
+.65314466
+
+.                         display e(mss)
+1595.9325
+
+.                         display e(df)
+.
+
+.                         display e(Ftest)
+.
+
+.                         display e(ll_0)
+-234.39434
+
+.                         display e(ll)
+-195.21698
+
+.                         display e(ic_0)
+.
+
+.                         display e(ic) 
+.
+
+.                         display e(rank)
+3
+
+.                         display e(k_eq_1) 
+.
+
+.                         display e(k_omitted) 
+.
+
+.                         display e(k_missing) 
+.
+
+.                         display e(k_differs)
+.
+
+.                         e(cmd) =  regress
+cmd not found
+r(111);
+
+end of do-file
+
+r(111);
+
+. do "C:\Users\PC\AppData\Local\Temp\STDb6c_000000.tmp"
+
+.                 regress mpg price weight
+
+      Source |       SS           df       MS      Number of obs   =        74
+-------------+----------------------------------   F(2, 71)        =     66.85
+       Model |  1595.93249         2  797.966246   Prob > F        =    0.0000
+    Residual |  847.526967        71  11.9369995   R-squared       =    0.6531
+-------------+----------------------------------   Adj R-squared   =    0.6434
+       Total |  2443.45946        73  33.4720474   Root MSE        =     3.455
+
+------------------------------------------------------------------------------
+         mpg |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       price |  -.0000935   .0001627    -0.57   0.567     -.000418    .0002309
+      weight |  -.0058175   .0006175    -9.42   0.000    -.0070489   -.0045862
+       _cons |   39.43966   1.621563    24.32   0.000     36.20635    42.67296
+------------------------------------------------------------------------------
+
+.                         
+.                 *scalar r2 = e(r2)
+.                 *display "R cuadrado (r2): " r2
+.                 
+.                 *scalar r2adj = e(r2) - (1 - e(r2))*(3-1)/(e(N) - 3)
+.                 *display "R cuadrado ajustado (r2adj): " r2adj
+.                 
+.                 // return list (scalars): 
+.                         display e(N) 
+74
+
+.                         display e(rmse)
+3.4549963
+
+.                         display e(r2)
+.65314466
+
+.                         display e(mss)
+1595.9325
+
+.                         display e(df)
+.
+
+.                         display e(Ftest)
+.
+
+.                         display e(ll_0)
+-234.39434
+
+.                         display e(ll)
+-195.21698
+
+.                         display e(ic_0)
+.
+
+.                         display e(ic) 
+.
+
+.                         display e(rank)
+3
+
+.                         display e(k_eq_1) 
+.
+
+.                         display e(k_omitted) 
+.
+
+.                         display e(k_missing) 
+.
+
+.                         display e(k_differs)
+.
+
+.                         display e(cmd) =  regress
+regressregress not found
+r(111);
+
+end of do-file
+
+r(111);
+
+. do "C:\Users\PC\AppData\Local\Temp\STDb6c_000000.tmp"
+
+.                         display e(cmd)
+regress
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STDb6c_000000.tmp"
+
+.                 regress mpg price weight
+
+      Source |       SS           df       MS      Number of obs   =        74
+-------------+----------------------------------   F(2, 71)        =     66.85
+       Model |  1595.93249         2  797.966246   Prob > F        =    0.0000
+    Residual |  847.526967        71  11.9369995   R-squared       =    0.6531
+-------------+----------------------------------   Adj R-squared   =    0.6434
+       Total |  2443.45946        73  33.4720474   Root MSE        =     3.455
+
+------------------------------------------------------------------------------
+         mpg |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       price |  -.0000935   .0001627    -0.57   0.567     -.000418    .0002309
+      weight |  -.0058175   .0006175    -9.42   0.000    -.0070489   -.0045862
+       _cons |   39.43966   1.621563    24.32   0.000     36.20635    42.67296
+------------------------------------------------------------------------------
+
+.                         
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STDb6c_000000.tmp"
+
+.                 display _b[weight]
+-.00581754
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STDb6c_000000.tmp"
+
+.                 reg mpg price weight 
+
+      Source |       SS           df       MS      Number of obs   =        74
+-------------+----------------------------------   F(2, 71)        =     66.85
+       Model |  1595.93249         2  797.966246   Prob > F        =    0.0000
+    Residual |  847.526967        71  11.9369995   R-squared       =    0.6531
+-------------+----------------------------------   Adj R-squared   =    0.6434
+       Total |  2443.45946        73  33.4720474   Root MSE        =     3.455
+
+------------------------------------------------------------------------------
+         mpg |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       price |  -.0000935   .0001627    -0.57   0.567     -.000418    .0002309
+      weight |  -.0058175   .0006175    -9.42   0.000    -.0070489   -.0045862
+       _cons |   39.43966   1.621563    24.32   0.000     36.20635    42.67296
+------------------------------------------------------------------------------
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STDb6c_000000.tmp"
+
+.                 display e(V)
+type mismatch
+r(109);
+
+end of do-file
+
+r(109);
+
+. do "C:\Users\PC\AppData\Local\Temp\STDb6c_000000.tmp"
+
+.                 reg mpg price weight 
+
+      Source |       SS           df       MS      Number of obs   =        74
+-------------+----------------------------------   F(2, 71)        =     66.85
+       Model |  1595.93249         2  797.966246   Prob > F        =    0.0000
+    Residual |  847.526967        71  11.9369995   R-squared       =    0.6531
+-------------+----------------------------------   Adj R-squared   =    0.6434
+       Total |  2443.45946        73  33.4720474   Root MSE        =     3.455
+
+------------------------------------------------------------------------------
+         mpg |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       price |  -.0000935   .0001627    -0.57   0.567     -.000418    .0002309
+      weight |  -.0058175   .0006175    -9.42   0.000    -.0070489   -.0045862
+       _cons |   39.43966   1.621563    24.32   0.000     36.20635    42.67296
+------------------------------------------------------------------------------
+
+.                 
+.                 // Calcular las desviaciones estándar de los coeficientes
+.                         local nvars = e(cmdline1) // Número de variables en la regresión, 
+
+.                                                                                                                                 // incluyendo la constante
+.                         forvalues i = 1/`nvars' {
+  2.                                         local se_coef`i' = sqrt(diag(e(V))[`i'])
+  3.                         }
+invalid syntax
+r(198);
+
+end of do-file
+
+r(198);
+
+. do "C:\Users\PC\AppData\Local\Temp\STDb6c_000000.tmp"
+
+.                 reg mpg price weight 
+
+      Source |       SS           df       MS      Number of obs   =        74
+-------------+----------------------------------   F(2, 71)        =     66.85
+       Model |  1595.93249         2  797.966246   Prob > F        =    0.0000
+    Residual |  847.526967        71  11.9369995   R-squared       =    0.6531
+-------------+----------------------------------   Adj R-squared   =    0.6434
+       Total |  2443.45946        73  33.4720474   Root MSE        =     3.455
+
+------------------------------------------------------------------------------
+         mpg |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       price |  -.0000935   .0001627    -0.57   0.567     -.000418    .0002309
+      weight |  -.0058175   .0006175    -9.42   0.000    -.0070489   -.0045862
+       _cons |   39.43966   1.621563    24.32   0.000     36.20635    42.67296
+------------------------------------------------------------------------------
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STDb6c_000000.tmp"
+
+.                         local nvars = e(cmdline1) // Número de variables en la regresión, 
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STDb6c_000000.tmp"
+
+.                         local nvars = e(cmdline1) // Número de variables en la regresión, 
+
+.                                                                                                                                 // incluyendo la constante
+.                         forvalues i = 1/`nvars' {
+  2.                                         local se_coef`i' = sqrt(diag(e(V))[`i'])
+  3.                         }
+invalid syntax
+r(198);
+
+end of do-file
+
+r(198);
+
+. do "C:\Users\PC\AppData\Local\Temp\STDb6c_000000.tmp"
+
+.                 display "El coeficiente estimado de weight: " _b[weight]
+El coeficiente estimado de weight: -.00581754
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STDb6c_000000.tmp"
+
+.                 scalar beta2_esti =  _b[weight]
+
+.                 display "El coeficiente estimado de weight: " beta2_esti
+El coeficiente estimado de weight: -.00581754
+
+.                 
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STDb6c_000000.tmp"
+
+.                 reg mpg price weight 
+
+      Source |       SS           df       MS      Number of obs   =        74
+-------------+----------------------------------   F(2, 71)        =     66.85
+       Model |  1595.93249         2  797.966246   Prob > F        =    0.0000
+    Residual |  847.526967        71  11.9369995   R-squared       =    0.6531
+-------------+----------------------------------   Adj R-squared   =    0.6434
+       Total |  2443.45946        73  33.4720474   Root MSE        =     3.455
+
+------------------------------------------------------------------------------
+         mpg |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       price |  -.0000935   .0001627    -0.57   0.567     -.000418    .0002309
+      weight |  -.0058175   .0006175    -9.42   0.000    -.0070489   -.0045862
+       _cons |   39.43966   1.621563    24.32   0.000     36.20635    42.67296
+------------------------------------------------------------------------------
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STDb6c_000000.tmp"
+
+.                 scalar beta2_esti =  _b[weight]
+
+.                 display "El coeficiente estimado de weight: " beta2_esti
+El coeficiente estimado de weight: -.00581754
+
+.                 
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STDb6c_000000.tmp"
+
+.                 reg mpg price weight 
+
+      Source |       SS           df       MS      Number of obs   =        74
+-------------+----------------------------------   F(2, 71)        =     66.85
+       Model |  1595.93249         2  797.966246   Prob > F        =    0.0000
+    Residual |  847.526967        71  11.9369995   R-squared       =    0.6531
+-------------+----------------------------------   Adj R-squared   =    0.6434
+       Total |  2443.45946        73  33.4720474   Root MSE        =     3.455
+
+------------------------------------------------------------------------------
+         mpg |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       price |  -.0000935   .0001627    -0.57   0.567     -.000418    .0002309
+      weight |  -.0058175   .0006175    -9.42   0.000    -.0070489   -.0045862
+       _cons |   39.43966   1.621563    24.32   0.000     36.20635    42.67296
+------------------------------------------------------------------------------
+
+.                 
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STDb6c_000000.tmp"
+
+.                 scalar beta3_esti =  _b[weight]
+
+.                 display "El coeficiente estimado de weight: " beta3_esti
+El coeficiente estimado de weight: -.00581754
+
+.                 
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STDb6c_000000.tmp"
+
+.                 
+.                 reg mpg price weight 
+
+      Source |       SS           df       MS      Number of obs   =        74
+-------------+----------------------------------   F(2, 71)        =     66.85
+       Model |  1595.93249         2  797.966246   Prob > F        =    0.0000
+    Residual |  847.526967        71  11.9369995   R-squared       =    0.6531
+-------------+----------------------------------   Adj R-squared   =    0.6434
+       Total |  2443.45946        73  33.4720474   Root MSE        =     3.455
+
+------------------------------------------------------------------------------
+         mpg |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       price |  -.0000935   .0001627    -0.57   0.567     -.000418    .0002309
+      weight |  -.0058175   .0006175    -9.42   0.000    -.0070489   -.0045862
+       _cons |   39.43966   1.621563    24.32   0.000     36.20635    42.67296
+------------------------------------------------------------------------------
+
+.                 
+.                 // Calcular las desviaciones estándar de los coeficientes
+.                         local nvars = e(cmdline1) // Número de variables en la regresión, 
+
+.                                                                                                                                 // incluyendo la constante
+.                         forvalues i = 1/`nvars' {
+  2.                                         local se_coef`i' = sqrt(diag(e(V))[`i'])
+  3.                         }
+invalid syntax
+r(198);
+
+end of do-file
+
+r(198);
+
+. do "C:\Users\PC\AppData\Local\Temp\STDb6c_000000.tmp"
+
+.                 reg mpg price weight 
+
+      Source |       SS           df       MS      Number of obs   =        74
+-------------+----------------------------------   F(2, 71)        =     66.85
+       Model |  1595.93249         2  797.966246   Prob > F        =    0.0000
+    Residual |  847.526967        71  11.9369995   R-squared       =    0.6531
+-------------+----------------------------------   Adj R-squared   =    0.6434
+       Total |  2443.45946        73  33.4720474   Root MSE        =     3.455
+
+------------------------------------------------------------------------------
+         mpg |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       price |  -.0000935   .0001627    -0.57   0.567     -.000418    .0002309
+      weight |  -.0058175   .0006175    -9.42   0.000    -.0070489   -.0045862
+       _cons |   39.43966   1.621563    24.32   0.000     36.20635    42.67296
+------------------------------------------------------------------------------
+
+.                 
+.                 // Calcular las desviaciones estándar de los coeficientes
+.                         local nvars = e(cmdline1) // Número de variables en la regresión, 
+
+.                                                                                                                                 // incluyendo la constante
+.                         forvalues i = 1/`nvars' {
+  2.                                         local se_coef`i' = sqrt(diag(e(V))[`i'])
+  3.                         }
+invalid syntax
+r(198);
+
+end of do-file
+
+r(198);
+
+. do "C:\Users\PC\AppData\Local\Temp\STDb6c_000000.tmp"
+
+.                 reg mpg price weight 
+
+      Source |       SS           df       MS      Number of obs   =        74
+-------------+----------------------------------   F(2, 71)        =     66.85
+       Model |  1595.93249         2  797.966246   Prob > F        =    0.0000
+    Residual |  847.526967        71  11.9369995   R-squared       =    0.6531
+-------------+----------------------------------   Adj R-squared   =    0.6434
+       Total |  2443.45946        73  33.4720474   Root MSE        =     3.455
+
+------------------------------------------------------------------------------
+         mpg |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       price |  -.0000935   .0001627    -0.57   0.567     -.000418    .0002309
+      weight |  -.0058175   .0006175    -9.42   0.000    -.0070489   -.0045862
+       _cons |   39.43966   1.621563    24.32   0.000     36.20635    42.67296
+------------------------------------------------------------------------------
+
+.                 
+.                 // Calcular las desviaciones estándar de los coeficientes
+.                         local nvars = e(cmdline1) // Número de variables en la regresión, 
+
+.                                                                                                                                 // incluyendo la constante
+.                         forvalues i = 1/`nvars' {
+  2.                                         local se_coef`i' = sqrt(diag(e(V))[`i'])
+  3.                         }
+invalid syntax
+r(198);
+
+end of do-file
+
+r(198);
+
+. do "C:\Users\PC\AppData\Local\Temp\STDb6c_000000.tmp"
+
+.                         regress mpg price weight
+
+      Source |       SS           df       MS      Number of obs   =        74
+-------------+----------------------------------   F(2, 71)        =     66.85
+       Model |  1595.93249         2  797.966246   Prob > F        =    0.0000
+    Residual |  847.526967        71  11.9369995   R-squared       =    0.6531
+-------------+----------------------------------   Adj R-squared   =    0.6434
+       Total |  2443.45946        73  33.4720474   Root MSE        =     3.455
+
+------------------------------------------------------------------------------
+         mpg |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       price |  -.0000935   .0001627    -0.57   0.567     -.000418    .0002309
+      weight |  -.0058175   .0006175    -9.42   0.000    -.0070489   -.0045862
+       _cons |   39.43966   1.621563    24.32   0.000     36.20635    42.67296
+------------------------------------------------------------------------------
+
+. 
+.                 // Calcular las desviaciones estándar de los coeficientes
+.                 local nvars = e(cmdline1) // Número de variables en la regresión,
+
+.                                                                                                                         // incluyendo la constante
+.                 forvalues i = 1/`nvars' {
+  2.                         local se_coef`i' = sqrt(diag(e(V))[`i'])
+  3.                 }
+invalid syntax
+r(198);
+
+end of do-file
+
+r(198);
+
+. do "C:\Users\PC\AppData\Local\Temp\STDb6c_000000.tmp"
+
+.                 reg mpg price weight 
+
+      Source |       SS           df       MS      Number of obs   =        74
+-------------+----------------------------------   F(2, 71)        =     66.85
+       Model |  1595.93249         2  797.966246   Prob > F        =    0.0000
+    Residual |  847.526967        71  11.9369995   R-squared       =    0.6531
+-------------+----------------------------------   Adj R-squared   =    0.6434
+       Total |  2443.45946        73  33.4720474   Root MSE        =     3.455
+
+------------------------------------------------------------------------------
+         mpg |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       price |  -.0000935   .0001627    -0.57   0.567     -.000418    .0002309
+      weight |  -.0058175   .0006175    -9.42   0.000    -.0070489   -.0045862
+       _cons |   39.43966   1.621563    24.32   0.000     36.20635    42.67296
+------------------------------------------------------------------------------
+
+.                 
+.                 scalar beta3_esti =  _b[weight]
+
+.                 display "El coeficiente estimado de weight: " beta3_esti
+El coeficiente estimado de weight: -.00581754
+
+.                 
+.                 
+.                 scalar tweight = (_b[weight] - 0) / _se[weight]
+
+.                 display "tweight: " tweight
+tweight: -9.4206417
+
+. 
+.                 
+. 
+end of do-file
+
+. do "D:\econometria\camero_trivedi_1\chapter_1\do_files\question_5.do"
+
+. /*=============================
+>         Limpiar el entorno de trabajo
+> =============================*/
+.         cls
+
+.         clear all
+
+.         set more off
+
+.         capture log close

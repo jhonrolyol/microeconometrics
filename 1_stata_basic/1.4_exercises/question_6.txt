@@ -1,0 +1,211 @@
+-----------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\econometria\camero_trivedi_1\chapter_1\do_files\question_6.txt
+  log type:  text
+ opened on:   9 May 2023, 12:15:48
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.         use "auto.dta", clear   
+(1978 Automobile Data)
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.                 global varlist1 mpg price weight
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.                 sum `varlist1'
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+        make |          0
+       price |         74    6165.257    2949.496       3291      15906
+         mpg |         74     21.2973    5.785503         12         41
+       rep78 |         69    3.405797    .9899323          1          5
+    headroom |         74    2.993243    .8459948        1.5          5
+-------------+---------------------------------------------------------
+       trunk |         74    13.75676    4.277404          5         23
+      weight |         74    3019.459    777.1936       1760       4840
+      length |         74    187.9324    22.26634        142        233
+        turn |         74    39.64865    4.399354         31         51
+displacement |         74    197.2973    91.83722         79        425
+-------------+---------------------------------------------------------
+  gear_ratio |         74    3.014865    .4562871       2.19       3.89
+     foreign |         74    .2972973    .4601885          0          1
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.                 local varlist2 mpg price weight
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.                 sum `varlist2'
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+        make |          0
+       price |         74    6165.257    2949.496       3291      15906
+         mpg |         74     21.2973    5.785503         12         41
+       rep78 |         69    3.405797    .9899323          1          5
+    headroom |         74    2.993243    .8459948        1.5          5
+-------------+---------------------------------------------------------
+       trunk |         74    13.75676    4.277404          5         23
+      weight |         74    3019.459    777.1936       1760       4840
+      length |         74    187.9324    22.26634        142        233
+        turn |         74    39.64865    4.399354         31         51
+displacement |         74    197.2973    91.83722         79        425
+-------------+---------------------------------------------------------
+  gear_ratio |         74    3.014865    .4562871       2.19       3.89
+     foreign |         74    .2972973    .4601885          0          1
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.                 sum varlist1
+variable varlist1 not found
+r(111);
+
+end of do-file
+
+r(111);
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.                 local varlist2 mpg price weight
+
+. 
+.         // Obtener las estadísticas resumidas para las 
+.         // variables en varlist
+.                 sum `varlist2'
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+         mpg |         74     21.2973    5.785503         12         41
+       price |         74    6165.257    2949.496       3291      15906
+      weight |         74    3019.459    777.1936       1760       4840
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.                 global varlist1 mpg price weight
+
+. 
+.         // Obtener las estadísticas resumidas para las variables
+.         // almacenadas en varlist
+.                 sum `varlist1'
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+        make |          0
+       price |         74    6165.257    2949.496       3291      15906
+         mpg |         74     21.2973    5.785503         12         41
+       rep78 |         69    3.405797    .9899323          1          5
+    headroom |         74    2.993243    .8459948        1.5          5
+-------------+---------------------------------------------------------
+       trunk |         74    13.75676    4.277404          5         23
+      weight |         74    3019.459    777.1936       1760       4840
+      length |         74    187.9324    22.26634        142        233
+        turn |         74    39.64865    4.399354         31         51
+displacement |         74    197.2973    91.83722         79        425
+-------------+---------------------------------------------------------
+  gear_ratio |         74    3.014865    .4562871       2.19       3.89
+     foreign |         74    .2972973    .4601885          0          1
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.                 local varlist2 mpg price weight
+
+. 
+.         // Obtener las estadísticas resumidas para las 
+.         // variables en varlist
+.                 sum `varlist2'
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+         mpg |         74     21.2973    5.785503         12         41
+       price |         74    6165.257    2949.496       3291      15906
+      weight |         74    3019.459    777.1936       1760       4840
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.                 local varlist2 mpg price weight
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.                 sum `varlist2'
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+        make |          0
+       price |         74    6165.257    2949.496       3291      15906
+         mpg |         74     21.2973    5.785503         12         41
+       rep78 |         69    3.405797    .9899323          1          5
+    headroom |         74    2.993243    .8459948        1.5          5
+-------------+---------------------------------------------------------
+       trunk |         74    13.75676    4.277404          5         23
+      weight |         74    3019.459    777.1936       1760       4840
+      length |         74    187.9324    22.26634        142        233
+        turn |         74    39.64865    4.399354         31         51
+displacement |         74    197.2973    91.83722         79        425
+-------------+---------------------------------------------------------
+  gear_ratio |         74    3.014865    .4562871       2.19       3.89
+     foreign |         74    .2972973    .4601885          0          1
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.                 local varlist2 mpg price weight
+
+. 
+.         // Obtener las estadísticas resumidas para las 
+.         // variables en varlist
+.                 sum `varlist2'
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+         mpg |         74     21.2973    5.785503         12         41
+       price |         74    6165.257    2949.496       3291      15906
+      weight |         74    3019.459    777.1936       1760       4840
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.         log close
+      name:  <unnamed>
+       log:  D:\econometria\camero_trivedi_1\chapter_1\do_files\question_6.txt
+  log type:  text
+ closed on:   9 May 2023, 12:22:08
+-----------------------------------------------------------------------------------------------------------------------

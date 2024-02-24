@@ -1,0 +1,538 @@
+-----------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\econometria\camero_trivedi_1\chapter_1\do_files\question_5.txt
+  log type:  text
+ opened on:   9 May 2023, 12:24:38
+
+.         
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.         
+.         use "auto.dta", clear   
+(1978 Automobile Data)
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.                 codebook mpg
+
+-----------------------------------------------------------------------------------------------------------------------
+mpg                                                                                                       Mileage (mpg)
+-----------------------------------------------------------------------------------------------------------------------
+
+                  type:  numeric (int)
+
+                 range:  [12,41]                      units:  1
+         unique values:  21                       missing .:  0/74
+
+                  mean:   21.2973
+              std. dev:    5.7855
+
+           percentiles:        10%       25%       50%       75%       90%
+                                14        18        20        25        29
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.                 codebook price
+
+-----------------------------------------------------------------------------------------------------------------------
+price                                                                                                             Price
+-----------------------------------------------------------------------------------------------------------------------
+
+                  type:  numeric (int)
+
+                 range:  [3291,15906]                 units:  1
+         unique values:  74                       missing .:  0/74
+
+                  mean:   6165.26
+              std. dev:    2949.5
+
+           percentiles:        10%       25%       50%       75%       90%
+                              3895      4195    5006.5      6342     11385
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.                 codebook weight 
+
+-----------------------------------------------------------------------------------------------------------------------
+weight                                                                                                    Weight (lbs.)
+-----------------------------------------------------------------------------------------------------------------------
+
+                  type:  numeric (int)
+
+                 range:  [1760,4840]                  units:  10
+         unique values:  64                       missing .:  0/74
+
+                  mean:   3019.46
+              std. dev:   777.194
+
+           percentiles:        10%       25%       50%       75%       90%
+                              2020      2240      3190      3600      4060
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.                 codebook mpg
+
+-----------------------------------------------------------------------------------------------------------------------
+mpg                                                                                                       Mileage (mpg)
+-----------------------------------------------------------------------------------------------------------------------
+
+                  type:  numeric (int)
+
+                 range:  [12,41]                      units:  1
+         unique values:  21                       missing .:  0/74
+
+                  mean:   21.2973
+              std. dev:    5.7855
+
+           percentiles:        10%       25%       50%       75%       90%
+                                14        18        20        25        29
+
+.                 codebook price
+
+-----------------------------------------------------------------------------------------------------------------------
+price                                                                                                             Price
+-----------------------------------------------------------------------------------------------------------------------
+
+                  type:  numeric (int)
+
+                 range:  [3291,15906]                 units:  1
+         unique values:  74                       missing .:  0/74
+
+                  mean:   6165.26
+              std. dev:    2949.5
+
+           percentiles:        10%       25%       50%       75%       90%
+                              3895      4195    5006.5      6342     11385
+
+.                 codebook weight 
+
+-----------------------------------------------------------------------------------------------------------------------
+weight                                                                                                    Weight (lbs.)
+-----------------------------------------------------------------------------------------------------------------------
+
+                  type:  numeric (int)
+
+                 range:  [1760,4840]                  units:  10
+         unique values:  64                       missing .:  0/74
+
+                  mean:   3019.46
+              std. dev:   777.194
+
+           percentiles:        10%       25%       50%       75%       90%
+                              2020      2240      3190      3600      4060
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.                 regress mpg price weight
+
+      Source |       SS           df       MS      Number of obs   =        74
+-------------+----------------------------------   F(2, 71)        =     66.85
+       Model |  1595.93249         2  797.966246   Prob > F        =    0.0000
+    Residual |  847.526967        71  11.9369995   R-squared       =    0.6531
+-------------+----------------------------------   Adj R-squared   =    0.6434
+       Total |  2443.45946        73  33.4720474   Root MSE        =     3.455
+
+------------------------------------------------------------------------------
+         mpg |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       price |  -.0000935   .0001627    -0.57   0.567     -.000418    .0002309
+      weight |  -.0058175   .0006175    -9.42   0.000    -.0070489   -.0045862
+       _cons |   39.43966   1.621563    24.32   0.000     36.20635    42.67296
+------------------------------------------------------------------------------
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.                 regress mpg price weight
+
+      Source |       SS           df       MS      Number of obs   =        74
+-------------+----------------------------------   F(2, 71)        =     66.85
+       Model |  1595.93249         2  797.966246   Prob > F        =    0.0000
+    Residual |  847.526967        71  11.9369995   R-squared       =    0.6531
+-------------+----------------------------------   Adj R-squared   =    0.6434
+       Total |  2443.45946        73  33.4720474   Root MSE        =     3.455
+
+------------------------------------------------------------------------------
+         mpg |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       price |  -.0000935   .0001627    -0.57   0.567     -.000418    .0002309
+      weight |  -.0058175   .0006175    -9.42   0.000    -.0070489   -.0045862
+       _cons |   39.43966   1.621563    24.32   0.000     36.20635    42.67296
+------------------------------------------------------------------------------
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.                 list eretrun
+variable eretrun not found
+r(111);
+
+end of do-file
+
+r(111);
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.                 list eretrum
+variable eretrum not found
+r(111);
+
+end of do-file
+
+r(111);
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.                 ereturn list 
+
+scalars:
+                  e(N) =  74
+               e(df_m) =  2
+               e(df_r) =  71
+                  e(F) =  66.84814256414501
+                 e(r2) =  .6531446579233134
+               e(rmse) =  3.454996314099513
+                e(mss) =  1595.932492798133
+                e(rss) =  847.5269666613265
+               e(r2_a) =  .6433740849070687
+                 e(ll) =  -195.2169813478502
+               e(ll_0) =  -234.3943376482347
+               e(rank) =  3
+
+macros:
+            e(cmdline) : "regress mpg price weight"
+              e(title) : "Linear regression"
+          e(marginsok) : "XB default"
+                e(vce) : "ols"
+             e(depvar) : "mpg"
+                e(cmd) : "regress"
+         e(properties) : "b V"
+            e(predict) : "regres_p"
+              e(model) : "ols"
+          e(estat_cmd) : "regress_estat"
+
+matrices:
+                  e(b) :  1 x 3
+                  e(V) :  3 x 3
+
+functions:
+             e(sample)   
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.                 regress mpg price weight
+
+      Source |       SS           df       MS      Number of obs   =        74
+-------------+----------------------------------   F(2, 71)        =     66.85
+       Model |  1595.93249         2  797.966246   Prob > F        =    0.0000
+    Residual |  847.526967        71  11.9369995   R-squared       =    0.6531
+-------------+----------------------------------   Adj R-squared   =    0.6434
+       Total |  2443.45946        73  33.4720474   Root MSE        =     3.455
+
+------------------------------------------------------------------------------
+         mpg |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       price |  -.0000935   .0001627    -0.57   0.567     -.000418    .0002309
+      weight |  -.0058175   .0006175    -9.42   0.000    -.0070489   -.0045862
+       _cons |   39.43966   1.621563    24.32   0.000     36.20635    42.67296
+------------------------------------------------------------------------------
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.                 scalar r2 = e(r2)
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.                 display "R cuadrado (r2): " r2
+R cuadrado (r2): .65314466
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.                 scalar N = e(N)
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.                 scalar r2adj = r2 - (1 - r2)*(3-1)/(N - 3)
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.                 display "R cuadrado ajustado (r2adj): " r2adj
+R cuadrado ajustado (r2adj): .64337408
+
+.                 
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.                 reg mpg price weight 
+
+      Source |       SS           df       MS      Number of obs   =        74
+-------------+----------------------------------   F(2, 71)        =     66.85
+       Model |  1595.93249         2  797.966246   Prob > F        =    0.0000
+    Residual |  847.526967        71  11.9369995   R-squared       =    0.6531
+-------------+----------------------------------   Adj R-squared   =    0.6434
+       Total |  2443.45946        73  33.4720474   Root MSE        =     3.455
+
+------------------------------------------------------------------------------
+         mpg |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       price |  -.0000935   .0001627    -0.57   0.567     -.000418    .0002309
+      weight |  -.0058175   .0006175    -9.42   0.000    -.0070489   -.0045862
+       _cons |   39.43966   1.621563    24.32   0.000     36.20635    42.67296
+------------------------------------------------------------------------------
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.                 reg mpg price weight, nocons
+
+      Source |       SS           df       MS      Number of obs   =        74
+-------------+----------------------------------   F(2, 72)        =    127.90
+       Model |  28099.0246         2  14049.5123   Prob > F        =    0.0000
+    Residual |   7908.9754        72  109.846881   R-squared       =    0.7804
+-------------+----------------------------------   Adj R-squared   =    0.7743
+       Total |       36008        74  486.594595   Root MSE        =    10.481
+
+------------------------------------------------------------------------------
+         mpg |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       price |  -.0000962   .0004936    -0.19   0.846    -.0010802    .0008878
+      weight |   .0064484   .0010811     5.96   0.000     .0042933    .0086036
+------------------------------------------------------------------------------
+
+.                 reg mpg price weight 
+
+      Source |       SS           df       MS      Number of obs   =        74
+-------------+----------------------------------   F(2, 71)        =     66.85
+       Model |  1595.93249         2  797.966246   Prob > F        =    0.0000
+    Residual |  847.526967        71  11.9369995   R-squared       =    0.6531
+-------------+----------------------------------   Adj R-squared   =    0.6434
+       Total |  2443.45946        73  33.4720474   Root MSE        =     3.455
+
+------------------------------------------------------------------------------
+         mpg |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       price |  -.0000935   .0001627    -0.57   0.567     -.000418    .0002309
+      weight |  -.0058175   .0006175    -9.42   0.000    -.0070489   -.0045862
+       _cons |   39.43966   1.621563    24.32   0.000     36.20635    42.67296
+------------------------------------------------------------------------------
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.                 scalar beta3_esti =  _b[weight]
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.                 display "El coeficiente estimado de weight: " beta3_esti
+El coeficiente estimado de weight: -.00581754
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.                 scalar tweight = (_b[weight] - 0) / _se[weight]
+
+.                 display "tweight: " tweight
+tweight: -9.4206417
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.                 scalar t`i' = (_b[`i'] - 0) / _se[`i']  
+invalid syntax
+r(198);
+
+end of do-file
+
+r(198);
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.                 forvalues i=1/3 {
+  2.                         scalar t`i' = (_b[`i'] - 0) / _se[`i']
+  3.                         display "t: " t`i'
+  4.                 }
+[1] not found
+r(111);
+
+end of do-file
+
+r(111);
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.                 foreach i of varlist price weight _cons {
+  2.                         regress mpg price weight
+  3.                         scalar t`i' = (_b[`i'] - 0)/_se[`i']
+  4.                         display "t: " t`i'
+  5.                 }
+variable _cons not found
+r(111);
+
+end of do-file
+
+r(111);
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.                 foreach var of varlist price weight _cons {
+  2.                         scalar t`var' = (_b[`var'] - 0)/_se[`var']
+  3.                         display "t: " t`var'
+  4.                 }
+variable _cons not found
+r(111);
+
+end of do-file
+
+r(111);
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.                 foreach var of varlist price weight {
+  2.                         scalar t`var' = (_b[`var'] - 0)/_se[`var']
+  3.                         display "t: " t`var'
+  4.                 }
+t: -.57468079
+t: -9.4206417
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.                 regress mpg price weight  
+
+      Source |       SS           df       MS      Number of obs   =        74
+-------------+----------------------------------   F(2, 71)        =     66.85
+       Model |  1595.93249         2  797.966246   Prob > F        =    0.0000
+    Residual |  847.526967        71  11.9369995   R-squared       =    0.6531
+-------------+----------------------------------   Adj R-squared   =    0.6434
+       Total |  2443.45946        73  33.4720474   Root MSE        =     3.455
+
+------------------------------------------------------------------------------
+         mpg |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       price |  -.0000935   .0001627    -0.57   0.567     -.000418    .0002309
+      weight |  -.0058175   .0006175    -9.42   0.000    -.0070489   -.0045862
+       _cons |   39.43966   1.621563    24.32   0.000     36.20635    42.67296
+------------------------------------------------------------------------------
+
+.                 
+.                 foreach var of varlist price weight {
+  2.                         scalar t`var' = (_b[`var'] - 0)/_se[`var']
+  3.                         display "t: " t`var'
+  4.                 }
+t: -.57468079
+t: -9.4206417
+
+.                 
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.                 search e()
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.                 help ereturn
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.         pwd
+D:\econometria\camero_trivedi_1\chapter_1\do_files
+
+.         global do_files "D:\econometria\camero_trivedi_1\chapter_1\do_files"
+
+.         cd "$do_files"
+D:\econometria\camero_trivedi_1\chapter_1\do_files
+
+.         pwd 
+D:\econometria\camero_trivedi_1\chapter_1\do_files
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.         pwd 
+D:\econometria\camero_trivedi_1\chapter_1\do_files
+
+.         global do_files "D:\econometria\camero_trivedi_1\chapter_1\do_files"
+
+.         cd "$do_files"
+D:\econometria\camero_trivedi_1\chapter_1\do_files
+
+.         pwd 
+D:\econometria\camero_trivedi_1\chapter_1\do_files
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.         cls
+
+.         clear all
+
+.         set more off
+
+.         capture log close

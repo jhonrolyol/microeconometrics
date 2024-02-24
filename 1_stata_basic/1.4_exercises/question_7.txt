@@ -1,0 +1,94 @@
+-----------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  D:\econometria\camero_trivedi_1\chapter_1\do_files\question_7.txt
+  log type:  text
+ opened on:   9 May 2023, 11:40:52
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.         use "auto.dta", clear   
+(1978 Automobile Data)
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.         
+.         br headroom length
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.         foreach var of varlist headroom length {
+  2.     gen total_`var' = headroom + length
+  3.         }
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.         browse 
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.         summarize headroom length
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+    headroom |         74    2.993243    .8459948        1.5          5
+      length |         74    187.9324    22.26634        142        233
+
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.         summarize total
+total ambiguous abbreviation
+r(111);
+
+end of do-file
+
+r(111);
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.         summarize total_headroom total_length
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+total_head~m |         74    190.9257    22.71468        145      236.5
+total_length |         74    190.9257    22.71468        145      236.5
+
+.         
+. 
+end of do-file
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+. ===================*/   
+== is not a valid command name
+r(199);
+
+end of do-file
+
+r(199);
+
+. do "C:\Users\PC\AppData\Local\Temp\STD10a0_000000.tmp"
+
+.         log close
+      name:  <unnamed>
+       log:  D:\econometria\camero_trivedi_1\chapter_1\do_files\question_7.txt
+  log type:  text
+ closed on:   9 May 2023, 11:45:03
+-----------------------------------------------------------------------------------------------------------------------
