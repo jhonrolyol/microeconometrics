@@ -69,7 +69,7 @@
 	graph twoway || scatter learnings education, ///
 								title("Ingresos por niveles de educación") ///
 								ytitle("Ingresos") xtitle("Niveles de educación")
-	Provide a single figure that uses scatterplot, lfit, and lowess of earnings against education.
+	*Provide a single figure that uses scatterplot, lfit, and lowess of earnings against education.
 	
 	* EN NIVELES
 	graph twoway (scatter earnings education) ///
@@ -79,6 +79,8 @@
              ytitle("Ingresos") xtitle("Niveles de educación")
 
 	* EN LOGARITMOS
+	gen leducation = log(education)
+	
 	graph twoway (scatter learnings leducation) ///
              (lfit earnings education) ///
              (lowess earnings education), ///

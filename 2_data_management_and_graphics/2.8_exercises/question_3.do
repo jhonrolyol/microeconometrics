@@ -17,6 +17,7 @@
 	
 	* Importar la data "mus202psid92m.dta"
 	use "mus202psid92m.dta"
+	browse
 	
 	* Revisando la data 
 	describe 
