@@ -1,0 +1,268 @@
+% Preamble
+\documentclass[10pt, aspectratio=169]{beamer}
+	% Packages
+	\usepackage[english]{babel}
+	\usepackage{lipsum}
+	\usepackage{mathptmx}
+	\usepackage{xcolor}
+	\usepackage{multicol}
+	\usepackage{graphics}
+	\usepackage{float}
+	% Themes
+	\usefonttheme[onlymath]{serif}
+	\usetheme[nofirafonts]{focus}
+	\renewcommand{\thempfootnote}{\arabic{mpfootnote}}
+	% Cover
+	\title{Microeconometrics Using Stata}
+	\subtitle{LINEAR INSTRUMENTAL - VARIABLES REGRESSION}
+	\author{
+		Jhon R. Ordoñez
+		\footnote{\label{1} National University of San Cristóbal de Huamanga}
+		\footnote{\label{2} Faculty of Economic, Administrative and Accounting Sciences}
+		\footnote{\label{3} Professional School of Economics}
+	}
+	\date{\today}
+% Body
+\begin{document}
+	% Cover
+	\begin{frame}
+		\maketitle
+	\end{frame}
+	% Outline
+	\begin{frame}[t]
+		\frametitle{Outline}
+		%\begin{multicols}{2}
+		\tableofcontents
+		%\end{multicols}
+	\end{frame}
+	% Section 1
+	\section{Exercise 1}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 1}
+				\begin{block}{Exercise 1}
+					Estimate by \textbf{2SLS} the same regression model as in \textcolor{red!50}{\textbf{section 7.4.4}}, with the
+					instruments \textcolor{blue}{\textbf{multlc}} and \textcolor{blue}{\textbf{firmsz}}. Compare the 2SLS estimates with OLS
+					estimates. Perform a test of endogeneity of \textcolor{blue}{\textbf{hi$\_$empunion}}. Perform a test of
+					overidentification. State what you conclude. Throughout this exercise,
+					perform inference that is robust to heteroskedasticity.
+				\end{block}
+		\end{frame}
+	% Section 2
+	\section{Exercise 2}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 2}
+			\begin{block}{Exercise 2}
+				Repeat exercise 1 using optimal \textbf{GMM}.
+			\end{block}
+		\end{frame}
+	% Section 3
+	\section{Exercise 3}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 3}
+			\begin{block}{Exercise 3}
+				Use the model and instruments of exercise 1. Compare the following
+				estimators: \textbf{2SLS}, \textbf{LIML}, and optimal \textbf{GMM }given heteroskedastic errors. For the
+				last model, estimate the parameters by using the community-contributed
+				\textcolor{blue}{\textbf{ivreg2}} command in addition to \textcolor{blue}{\textbf{ivregress}}.
+			\end{block}
+		\end{frame}
+	% Section 4
+	\section{Exercise 4}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 4}
+			\begin{block}{Exercise 4}
+				Use the model of exercise 1. Compare \textbf{2SLS} estimates as the instruments
+				\textcolor{blue}{\textbf{ssiratio}}, \textcolor{blue}{\textbf{lowincome}}, \textcolor{blue}{\textbf{multlc}}, and \textcolor{blue}{\textbf{firmsz}} are progressively added.
+			\end{block}
+		\end{frame}
+	% Section 5
+	\section{Exercise 5}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 5}
+			\begin{block}{Exercise 5}
+				Use the model and instruments of exercise 1. Perform appropriate
+				diagnostics and tests for weak instruments using the \textbf{2SLS} estimator. State
+				what you conclude. Throughout this exercise, perform inference assuming
+				errors are i.i.d.
+			\end{block}
+		\end{frame}
+	% Section 6
+	\section{Exercise 6}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 6}
+			\begin{block}{Exercise 6}
+				Use the model and instruments of exercise 1. Use the community-contributed
+				\textcolor{blue}{\textbf{condivreg}} command to perform inference for the \textbf{2SLS} estimator.
+				Compare the results with those using conventional asymptotics.
+			\end{block}
+		\end{frame}
+	% Section 7
+	\section{Exercise  7}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 7}
+			\begin{block}{Exercise 7}
+				Use the model and instruments of exercise 1. Use the community-contributed \textcolor{blue}{\textbf{jive}} command,
+				and compare estimates and standard errors from
+				the four different variants of \textbf{JIVE} and from optimal \textbf{GMM}. Throughout this
+				exercise, perform inference that is robust to heteroskedasticity.
+			\end{block}
+		\end{frame}
+	% Section 8
+	\section{Exercise 8}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 8}
+			\begin{block}{Exercise 8}
+				Fit the \textbf{3SLS} model of \textcolor{red!50}{\textbf{section 7.10}}, and compare the \textbf{3SLS} coefficient estimates
+				and standard errors in the \textcolor{blue}{\textbf{ldrugexp}} equation with those from \textbf{2SLS} estimation
+				(with default standard errors).
+			\end{block}
+		\end{frame}
+	% Section 9
+	\section{Exercise 9}
+		% Slide 1
+		\begin{frame}[label = slide 1]
+			\frametitle{Exercise 9}
+			\begin{block}{Exercise 9}
+				This question considers the same earnings-schooling dataset as that
+				analyzed in \textcolor{green!75}{\textbf{Cameron and Trivedi}} (\textcolor{green!75}{\textbf{2005}}, 111). The data are in
+				\textcolor{blue}{\textbf{mus207klingdata.dta}}. The \textcolor{blue}{\textbf{describe}} command provides descriptions of the
+				regressors. There are three endogenous regressors (years of schooling, years
+				of work experience, and experience-squared) and three instruments (a
+				college proximity indicator, age, and age-squared). Interest lies in the
+				coefficient of schooling. Perform appropriate diagnostics and tests for weak
+				instruments for the following model. State what you conclude. The
+				following commands yield the \textbf{IV} estimator:
+				\hyperlink{slide 1 - commands}{\beamergotobutton{see commands}}
+			\end{block}
+		\end{frame}
+	% Section 10
+	\section{Exercise 10}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 10}
+			\begin{block}{Exercise 10}
+				Use the same dataset as the previous question. Treat only \textcolor{blue}{\textbf{grade76}} as
+				endogenous, let \textcolor{blue}{\textbf{exp76}} and \textcolor{blue}{\textbf{expsq76}} be exogenous, and use \textcolor{blue}{\textbf{col4}} as the only
+				instrument. Perform appropriate diagnostics and tests for a weak instrument,
+				and state what you conclude. Then, use the community-contributed
+				\textcolor{blue}{\textbf{condivreg}} command to perform inference, and compare the results with
+				those using conventional asymptotics.
+			\end{block}
+		\end{frame}
+	% Section 11
+	\section{Exercise 11}
+		% Slide 1
+		\begin{frame}[t]
+			%\frametitle{Exercise 11}
+			\begin{block}{Exercise 11}
+				When an endogenous variable enters the regression nonlinearly, the obvious
+				\textbf{IV} estimator is inconsistent and a modification is needed. Specifically,
+				suppose $y_{1} = \beta y_{2}^{2} + u $ and the first-stage equation for
+				$y_{2}$ is $y_{2} = \pi_{2}z + v $ where the zero-mean errors and are correlated.
+				Here the endogenous regressor appears in the structural equation as $y_{2}^{2}$ rather than $y_{2}$.
+				The \textbf{IV} estimator is 
+					\begin{equation}
+						\hat{\beta}_{IV} = \left(\sum_{i}z_{i}y_{2i}^{2} \right)^{-1}\sum_{i}z_{i}y_{1i}
+					\end{equation}
+				This can be implemented by a regular \textbf{IV} regression of $y$ on $y_{2}^{2}$ with the instrument
+				$z$: regress $y_{2}^{2}$ on $z$ and then regress $y_{1}$ on the first-stage prediction $\widehat{y_{2}^{2}}$. 
+				If instead we regress $y_{2}$ on $z$
+				at the first stage, giving $\hat{y_{2}}$, and then regress $y_{1}$ on $\left(\hat{y}_{2}\right)^{2}$, an inconsistent
+				estimate is obtained. Generate a simulation sample to demonstrate these
+				points. Consider whether this example can be generalized to other nonlinear
+				models where the nonlinearity is in regressors only, so that 
+					\begin{equation}
+						y_{1} = \mathbf{g}\left(\mathbf{y}_{2}\right)'\mathbf{\beta} + u
+					\end{equation}
+				where $\mathbf{g}\left(\mathbf{y}_{2}\right)$ is a nonlinear function of $\mathbf{y}_{2}$.
+			\end{block}
+		\end{frame}
+	% Section 12
+	\section{Exercise 12}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 12}
+			\begin{block}{Exercise 12}
+				This exercise is based on artificially generated data. Set sample size to
+				$1,000$. Set seed to \textcolor{blue}{\textbf{10101}}. Generate a sample using the following \textbf{DGP}: 
+				$u\sim N(0,1)$; $e \sim 0.6u + N(0,1)$; $z \sim uniform(0,1)$;
+				$y_{2} = z + 0.5z^{2} + 0.0625z^{3} + e$; $x \sim N(0,9)$; $y_{1} = y_{2} + 0.5y_{2}^{2} + x + u$
+				Estimate the $y_{1}$ equation by \textbf{OLS}. Theoretically, the estimates of the equation
+				are inconsistent. Compare all the slope coefficients with their true values,
+				and discuss whether the direction of the bias is as you might expect. \textbf{OLS} is
+				inconsistent in this case, yet some coefficients are estimated close to their
+				true values; explain why. Run the same regression again with the intercept
+				constrained to zero, and comment on any differences that you might observe.
+			\end{block}
+		\end{frame}
+	% Section 13
+	\section{Exercise 13}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 13}
+			\begin{block}{Exercise 13}
+				Continuing the previous exercise, estimate three variants of the $y_{1}$-equation
+				by \textbf{2SLS} using as instruments
+					\begin{itemize}
+						\item[i)] $x$, $z$, and $z^{2}$ 
+						\item[ii)] $x$, $z$, $z^{2}$, and $z^{3}$ 
+						\item[iii)] $\hat{y}_{2}$ and $\hat{y}_{2}^{2}$
+					\end{itemize}
+				where $\hat{y}_{2}$ is the fitted value of $y_{2}$ from the reduced form of $y_{2}$. Are the
+				instruments chosen in each case valid and relevant? Which of the three
+				estimates would you prefer on theoretical grounds? Explain your answer.
+				With reference to the \textbf{2SLS} estimates used earlier, apply the test of
+				overidentification where appropriate, and interpret your results.
+			\end{block}
+		\end{frame}
+	% Section 14
+	\section{Exercise 14}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 14}
+			\begin{block}{Exercise 14}
+				This question continues with the model presented in question $12$ above.
+				Modify the specification of the $y_{1}$ equation such that the equation errors are
+				heteroskedastic, with skedasticity being a quadratic function of $x$; that is, 
+					\begin{equation}
+						Var(u) = h(x)\times N(0,1)
+					\end{equation}
+				Reestimate the $y_{1}$ equation by \textbf{2SLS} and two-step
+				\textbf{GMM} using as instruments $x$, $z$, $z^{2}$, $z^{3}$. In both cases, apply the test of
+				overidentifying restrictions. Compare the results, and comment on the
+				outcome of the test.
+			\end{block}
+		\end{frame}
+	% References
+	\begin{frame}[t,allowframebreaks]
+		\frametitle{References}
+		\bibliography{biblio.bib}
+		% Style
+		\bibliographystyle{apalike}
+		% Authors
+		\nocite{cameron2022-I}
+		\nocite{cameron2022-II}
+	\end{frame}
+	% Cover
+	\begin{frame}
+		\maketitle
+	\end{frame}
+	% Appendix
+	\begin{frame}[label = slide 1 - commands]
+		\begin{block}{Commands}
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale = 0.5]{figures/fig1.PNG}
+			\end{figure}
+			\hyperlink{slide 1}{\beamergotobutton{back}}
+		\end{block}
+	\end{frame}
+\end{document}

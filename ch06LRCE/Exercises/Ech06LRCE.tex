@@ -1,0 +1,171 @@
+% Preamble
+\documentclass[11pt, aspectratio=169]{beamer}
+	% Packages
+	\usepackage[english]{babel}
+	\usepackage{lipsum}
+	\usepackage{mathptmx}
+	\usepackage{xcolor}
+	% Themes
+	\usefonttheme[onlymath]{serif}
+	\usetheme[nofirafonts]{focus}
+	\renewcommand{\thempfootnote}{\arabic{mpfootnote}}
+	% Cover
+	\title{Microeconometrics Using Stata}
+	\subtitle{LINEAR REGRESSION WITH CORRELATED ERRORS}
+	\author{
+		Jhon R. Ordoñez
+		\footnote{\label{1} National University of San Cristóbal de Huamanga}
+		\footnote{\label{2} Faculty of Economic, Administrative and Accounting Sciences}
+		\footnote{\label{3} Professional School of Economics}
+	}
+	\date{\today}
+% Body
+\begin{document}
+	% Cover
+	\begin{frame}
+		\maketitle
+	\end{frame}
+	% Outline
+	\begin{frame}[t]
+		\frametitle{Outline}
+		\tableofcontents
+	\end{frame}
+	% Section 1
+	\section{Exercise 1}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 1}
+				\begin{block}{Exercise 1}
+					Generate data by using the same \textbf{DGP} as that in \textcolor{red}{\textbf{section 6.3}}, and
+					implement the first step of \textbf{FGLS} estimation to get the predicted
+					variance \textcolor{blue}{\textbf{varu}}. Now, compare several different methods to implement
+					the second step of weighted estimation. First, use \textcolor{blue}{\textbf{regress}} with the
+					modifier \textcolor{blue}{\textbf{[aweight=1/varu]}}, as in the text. Second, manually
+					implement this regression by generating the transformed variable
+					\textcolor{blue}{\textbf{try=y/sqrt(varu)}} and regressing \textcolor{blue}{\textbf{try}} on the similarly constructed
+					variables \textcolor{blue}{\textbf{trx2}}, \textcolor{blue}{\textbf{trx3}}, and \textcolor{blue}{\textbf{trone}}, using \textcolor{blue}{\textbf{regress}} with the \textcolor{blue}{\textbf{noconstant}}          
+					option. Third, use \textcolor{blue}{\textbf{regress}} with \textcolor{blue}{\textbf{[pweight=1/varu]}}, and show that the
+					default standard errors using \textcolor{blue}{\textbf{pweight}}s differ from those using
+					\textcolor{blue}{\textbf{aweight}}s because the \textcolor{blue}{\textbf{pweight}}s default is to compute robust standard
+					errors.
+				\end{block}
+		\end{frame}
+	% Section 2
+	\section{Exercise 2}
+		% Slide 1
+		\begin{frame}[t]
+			\frametitle{Exercise 2}
+			\begin{block}{Exercise 2}
+				Consider the same \textbf{DGP} as that in \textcolor{red!50}{\textbf{section 6.3}}. Given this specification
+				of the model, the rescaled equation
+					\begin{equation}
+						\dfrac{y}{w} = \beta_{1}\left(\dfrac{1}{w}\right) + \beta_{2}\left(\dfrac{x_{2}}{w}\right) + \beta_{3}\left(\dfrac{x_{3}}{w}\right) + e
+					\end{equation}
+				where
+					\begin{equation}
+						w = \sqrt{exp\left(-1 + 0.2x_{2}\right)}
+					\end{equation}
+				will have the error $e$, which is normally distributed and homoskedastic.
+				Treat $w$ as known, and estimate this rescaled regression in Stata by 
+				using \textcolor{blue}{\textbf{regress}} with the \textcolor{blue}{\textbf{noconstant}} option. 
+				Compare the results with those given in \textcolor{red!50}{\textbf{section 6.3}}, where the
+				weight $w$ was estimated. Is there a big difference here between the \textbf{GLS} and \textbf{FGLS} estimators?
+			\end{block}
+		\end{frame}
+	% Section 3
+	\section{Exercise 3}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 3}
+			\begin{block}{Exercise 3}
+				Consider the same DGP as that in \textcolor{red!50}{\textbf{section 6.3}}. Suppose that we
+				incorrectly assume that 
+					\begin{equation}
+						u \sim N\left(0, \sigma^{2}x_{2}^{2}\right)
+					\end{equation}
+				Then \textbf{FGLS} estimates can be obtained by using \textcolor{blue}{\textbf{regress}} with \textcolor{blue}{\textbf{[pweight=1/x2sq]}}, where \textcolor{blue}{\textbf{x2sq=x22}} .
+				How different are the estimates of $(\beta_{1}, \beta_{2}, \beta_{3})$ from the \textbf{OLS} results?
+				Can you explain what has happened in terms of the consequences of
+				using the wrong skedasticity function? Do the standard errors change
+				much if robust standard errors are computed? Use the \textcolor{blue}{\textbf{estat hettest}}
+				command to check whether the regression errors in the transformed
+				model are homoskedastic.
+			\end{block}
+		\end{frame}
+	% Section 4
+	\section{Exercise 4}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 4}
+			\begin{block}{Exercise 4}
+				For the model and data of \textcolor{red!50}{\textbf{section 6.7}}, verify that \textcolor{blue}{\textbf{mixed}} with the \textcolor{blue}{\textbf{mle}}
+				option gives the same results as \textcolor{blue}{\textbf{xtreg}}, \textcolor{blue}{\textbf{mle}}. Also, compare the results
+				with those from using \textcolor{blue}{\textbf{mixed}} with the \textcolor{blue}{\textbf{reml}} option. Fit the two-way RE
+				model assuming random individual and time effects, and compare
+				results with those from when the time effects are allowed to be fixed
+				(in which case time dummies are included as regressors).
+			\end{block}
+		\end{frame}
+	% Section 5
+	\section{Exercise 5}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 5}
+			\begin{block}{Exercise 5}
+				Consider the same dataset as in \textcolor{red!50}{\textbf{section 6.8}}. Repeat the analysis of
+				\textcolor{red!50}{\textbf{section 6.8}} using the dependent variables \textcolor{blue}{\textbf{drugexp}} and \textcolor{blue}{\textbf{totothr}}, which
+				are in levels rather than logs (so heteroskedasticity is more likely to be
+				a problem). First, estimate the two equations using \textbf{OLS} with default
+				standard errors and robust standard errors, and compare the standard
+				errors. Second, estimate the two equations jointly using \textcolor{blue}{\textbf{sureg}}, and
+				compare the estimates with those from \textbf{OLS}. Third, use the \textcolor{blue}{\textbf{bootstrap}}
+				prefix to obtain robust standard errors from \textcolor{blue}{\textbf{sureg}}, and compare the
+				efficiency of joint estimation with that of OLS. Hint: It is much easier to
+				compare estimates across methods if the \textcolor{blue}{\textbf{estimates}} command is used;
+				see \textcolor{red!50}{\textbf{section 3.5.6}}.
+			\end{block}
+		\end{frame}
+	% Section 6
+	\section{Exercise 6}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 6}
+			\begin{block}{Exercise 6}
+				Consider the same dataset as in \textcolor{red!50}{\textbf{section 6.9}}. Repeat the analysis of
+				\textcolor{red!50}{\textbf{section 6.9}} using all observations rather than restricting the sample to
+				ages between 21 and 65 years. First, declare the survey design.
+				Second, compare the unweighted mean of \textcolor{blue}{\textbf{hgb}} and its standard error,
+				ignoring survey design, with the weighted mean and standard error,
+				allowing for all features of the survey design. Third, do a similar
+				comparison for least-squares regression of \textcolor{blue}{\textbf{hgb}} on \textcolor{blue}{\textbf{age}} and \textcolor{blue}{\textbf{female}}.
+				Fourth, estimate this same regression using \textcolor{blue}{\textbf{regress}} with \textcolor{blue}{\textbf{pweight}s}
+				and cluster-robust standard errors, and compare with the survey
+				results.
+			\end{block}
+		\end{frame}
+	% Section 7
+	\section{Exercise 7}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 7}
+			\begin{block}{Exercise 7}
+				Reconsider the dataset from \textcolor{red!50}{\textbf{section 6.8.3}}. Estimate the parameters of
+				each equation by \textbf{OLS}. Compare these \textbf{OLS} results with the \textbf{SUR} results
+				reported in \textcolor{red!50}{\textbf{section 6.8.3}}.
+			\end{block}
+		\end{frame}
+	% References
+	\begin{frame}[t,allowframebreaks]
+		\frametitle{References}
+		\bibliography{biblio.bib}
+		% Style
+		\bibliographystyle{apalike}
+		% Authors
+		\nocite{cameron2022-I}
+		\nocite{cameron2022-II}
+	\end{frame}
+	% Cover
+	\begin{frame}
+		\maketitle
+	\end{frame}
+\end{document}

@@ -1,0 +1,138 @@
+% Preamble
+\documentclass[11pt, aspectratio=169]{beamer}
+	% Packages
+	\usepackage[english]{babel}
+	\usepackage{lipsum}
+	\usepackage{mathptmx}
+	\usepackage{xcolor}
+	% Themes
+	\usefonttheme[onlymath]{serif}
+	\usetheme[nofirafonts]{focus}
+	\renewcommand{\thempfootnote}{\arabic{mpfootnote}}
+	% Cover
+	\title{Microeconometrics Using Stata}
+	\subtitle{Linear panel - data models: basics}
+	\author{
+		Jhon R. Ordoñez
+		\footnote{\label{1} National University of San Cristóbal de Huamanga}
+		\footnote{\label{2} Faculty of Economic, Administrative and Accounting Sciences}
+		\footnote{\label{3} Professional School of Economics}
+	}
+	\date{\today}
+% Body
+\begin{document}
+	% Cover
+	\begin{frame}
+		\maketitle
+	\end{frame}
+	% Outline
+	\begin{frame}[t]
+		\frametitle{Outline}
+		\tableofcontents
+	\end{frame}
+	% Section 1
+	\section{Exercise 1}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 1}
+				\begin{block}{Exercise 1}
+					For the data of \textcolor{red!50}{\textbf{section 8.3}}, use \textcolor{blue}{\textbf{xtsum}} 
+					to describe the variation in \textcolor{blue}{\textbf{occ}},
+					\textcolor{blue}{\textbf{smsa}}, \textcolor{blue}{\textbf{ind}}, \textcolor{blue}{\textbf{ms}},
+					\textcolor{blue}{\textbf{union}}, \textcolor{blue}{\textbf{fem}},
+					and \textcolor{blue}{\textbf{blk}}. Which of these variables are time
+					invariant? Use \textcolor{blue}{\textbf{xttab}} and \textcolor{blue}{\textbf{xttrans}} to provide interpretations of how
+					\textcolor{blue}{\textbf{occ}} changes for individuals over the seven years. Provide a time-series
+					plot of \textcolor{blue}{\textbf{exp}} for the first $10$ observations, and provide interpretation.
+					Provide a scatterplot of \textcolor{blue}{\textbf{lwage}} against \textcolor{blue}{\textbf{ed}}. Is this plot showing within
+					variation, between variation, or both?
+				\end{block}
+		\end{frame}
+	% Section 2
+	\section{Exercise 2}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 2}
+			\begin{block}{Exercise 2}
+				For the data of \textcolor{red!50}{\textbf{section 8.3}}, manually obtain the three standard
+				deviations of \textcolor{blue}{\textbf{lwage}} given by the \textcolor{blue}{\textbf{xtsum}} command. For the overall
+				standard deviation, use \textcolor{blue}{\textbf{summarize}}. For the between standard
+				deviation, compute \textcolor{blue}{\textbf{by id: egen meanwage = mean(lwage)}}, and apply
+				\textcolor{blue}{\textbf{summarize}} to \textcolor{blue}{\textbf{(meanwage-grandmean)}} for \textcolor{blue}{\textbf{t==1}}, where grandmean is
+				the grand mean over all observations. For the within standard
+				deviation, apply \textcolor{blue}{\textbf{summarize}} to \textcolor{blue}{\textbf{(lwage-meanwage)}}. Compare your
+				standard deviations with those from \textcolor{blue}{\textbf{xtsum}}. Does
+					\begin{equation}
+						s_{O}^{2} \simeq s_{W}^{2} + s_{B}^{2}?
+					\end{equation}
+			\end{block}
+		\end{frame}
+	% Section 3
+	\section{Exercise 3}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 3}
+			\begin{block}{Exercise 3}
+				For the model and data of \textcolor{blue}{\textbf{section 8.4}}, compare PFGLS estimators under
+				the following assumptions about the error process: independent,
+				exchangeable, \textbf{AR(2)}, and \textbf{MA(6)}. Also, compare the associated
+				standard-error estimates obtained by using default standard errors and
+				by using cluster-robust standard errors. You will find it easiest if you
+				combine results using \textcolor{blue}{\textbf{estimates table}}. What happens if you try to fit
+				the model with no structure placed on the error correlations?
+			\end{block}
+		\end{frame}
+	% Section 4
+	\section{Exercise 4}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 4}
+			\begin{block}{Exercise 4}
+				 For the model and data of \textcolor{red!50}{\textbf{section 8.5}}, obtain the within estimator by
+				applying \textcolor{blue}{\textbf{regress}} to \textcolor{red!50}{\textbf{(8.7)}}. Hint: For example, for variable x, type by
+				\textcolor{blue}{\textbf{id: egen avex = mean(x)}} followed by \textcolor{blue}{\textbf{summarize}} $x$ and then \textcolor{blue}{\textbf{generate}}
+				\textcolor{blue}{\textbf{mdx = x - avex + r(mean)}}. Verify that you get the same estimated
+				coefficients as you would with \textcolor{blue}{\textbf{xtreg}}, \textcolor{blue}{\textbf{fe}}.
+			\end{block}
+		\end{frame}
+	% Section 5
+	\section{Exercise 5}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 5}
+			\begin{block}{Exercise 5}
+				For the model and data of \textcolor{red!50}{\textbf{section 8.6}}, compare the \textbf{RE} estimators that
+				were obtained by using xtreg with the \textcolor{blue}{\textbf{re}}, \textcolor{blue}{\textbf{mle}}, and \textcolor{blue}{\textbf{pa}} options and
+				\textcolor{blue}{\textbf{xtgee}} with the \textcolor{blue}{\textbf{corr(exchangeable)}} option. Also, compare the
+				associated standard-error estimates obtained by using default standard
+				errors and by using cluster-robust standard errors. You will find it
+				easiest if you combine results using \textcolor{blue}{\textbf{estimates table}}.
+			\end{block}
+		\end{frame}
+	% Section 6
+	\section{Exercise 6}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 6}
+			\begin{block}{Exercise 6}
+				Consider the RE model output given in \textcolor{red!50}{\textbf{section 8.7}}. Verify that, given
+				the estimated values of \textcolor{blue}{\textbf{e$\_$sigma}} and \textcolor{blue}{\textbf{u$\_$sigma}}, application of the
+				formulas in that section leads to the estimated values of \textcolor{blue}{\textbf{rho}} and
+				\textcolor{blue}{\textbf{theta}}.
+			\end{block}
+		\end{frame}
+	% References
+	\begin{frame}[t,allowframebreaks]
+		\frametitle{References}
+		\bibliography{biblio.bib}
+		% Style
+		\bibliographystyle{apalike}
+		% Authors
+		\nocite{cameron2022-I}
+		\nocite{cameron2022-II}
+	\end{frame}
+	% Cover
+	\begin{frame}
+		\maketitle
+	\end{frame}
+\end{document}
