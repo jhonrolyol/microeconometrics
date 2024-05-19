@@ -1,0 +1,137 @@
+% Preamble
+\documentclass[11pt, aspectratio=169]{beamer}
+	% Packages
+	\usepackage[english]{babel}
+	\usepackage{lipsum}
+	\usepackage{mathptmx}
+	\usepackage{xcolor}
+	% Themes
+	\usefonttheme[onlymath]{serif}
+	\usetheme[nofirafonts]{focus}
+	\renewcommand{\thempfootnote}{\arabic{mpfootnote}}
+	% Cover
+	\title{Microeconometrics Using Stata}
+	\subtitle{BINARY OUTCOME MODELS}
+	\author{
+		Jhon R. Ordoñez
+		\footnote{\label{1} National University of San Cristóbal de Huamanga}
+		\footnote{\label{2} Faculty of Economic, Administrative and Accounting Sciences}
+		\footnote{\label{3} Professional School of Economics}
+	}
+	\date{\today}
+% Body
+\begin{document}
+	% Cover
+	\begin{frame}
+		\maketitle
+	\end{frame}
+	% Outline
+	\begin{frame}[t]
+		\frametitle{Outline}
+		\tableofcontents
+	\end{frame}
+	% Section 1
+	\section{Exercise 1}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 1}
+				\begin{block}{Exercise 1}
+					Consider the example of \textcolor{red!50}{\textbf{section 17.4}} with dependent variable \textcolor{blue}{\textbf{ins}} and
+					the single regressor \textcolor{blue}{\textbf{educyear}}. Estimate the parameters of logit, probit,
+					and \textbf{OLS} models using both default and robust standard errors. For the
+					regressor \textcolor{blue}{\textbf{educyear}}, compare its coefficient across the models,
+					compare default and robust standard errors of this coefficient, and
+					compare the $t$ statistics based on robust standard errors. For each
+					model, compute the \textbf{ME} of one more year of education for someone
+					with sample mean years of education, as well as the \textbf{AME}. Which
+					model fits the data better-logit or probit?	
+				\end{block}
+		\end{frame}
+	% Section 2
+	\section{Exercise 2}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 2}
+			\begin{block}{Exercise 2}
+				Use the \textcolor{blue}{\textbf{cloglog}} command to estimate the parameters of the binary
+				probability model for \textcolor{blue}{\textbf{ins}} with the same explanatory variables used in
+				the \textcolor{blue}{\textbf{logit}} model in this chapter. Estimate the AME for the regressors.
+				Calculate the odds ratios of \textcolor{blue}{\textbf{ins=1}} for the following values of the
+				covariates: \textcolor{blue}{\textbf{age=50}}, \textcolor{blue}{\textbf{retire=0}}, \textcolor{blue}{\textbf{hstatusg=1}}, \textcolor{blue}{\textbf{hhincome=45}},
+				\textcolor{blue}{\textbf{educyear=12}}, \textcolor{blue}{\textbf{married=1}}, and \textcolor{blue}{\textbf{hisp=0}}.
+			\end{block}
+		\end{frame}
+	% Section 3
+	\section{Exercise 3}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 3}
+			\begin{block}{Exercise 3}
+				Generate a graph of fitted probabilities against years of education
+				(\textcolor{blue}{\textbf{educyear}}) or age (\textcolor{blue}{\textbf{age}}) using as a template the commands used for
+				generating \textcolor{green!75}{\textbf{figure 17.1}} in this chapter.
+			\end{block}
+		\end{frame}
+	% Section 4
+	\section{Exercise 4}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 4}
+			\begin{block}{Exercise 4}
+				Estimate the parameters of the logit model of \textcolor{red!50}{\textbf{section 17.4.2.}} Now,
+				estimate the parameters of the probit model using the \textcolor{blue}{\textbf{probit}}
+				command. Use the reported log likelihoods to compare the models by
+				the Akaike’s information criterion and \textbf{BIC}.
+			\end{block}
+		\end{frame}
+	% Section 5
+	\section{Exercise 5}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 5}
+			\begin{block}{Exercise 5}
+				Estimate the probit regression of \textcolor{red!50}{\textbf{section 17.4.4.}} Using the
+				conditioning values (\textcolor{blue}{\textbf{age=65}}, \textcolor{blue}{\textbf{retire=1}}, \textcolor{blue}{\textbf{hstatusg=1}}, \textcolor{blue}{\textbf{hhincome=60}},
+				\textcolor{blue}{educyear=17}, \textcolor{blue}{\textbf{married=1}}, \textcolor{blue}{\textbf{hisp=0}}), estimate and compare the \textbf{ME} of
+				\textcolor{blue}{\textbf{age}} on the Pr(\textcolor{blue}{\textbf{ins=1|x}}), using both the \textcolor{blue}{\textbf{margins}} and \textcolor{blue}{\textbf{prchange}}
+				commands. They should give the same result.
+			\end{block}
+		\end{frame}
+	% Section 6
+	\section{Exercise 6}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 6}
+			\begin{block}{Exercise 6}
+				Using the \textcolor{blue}{\textbf{hetprobit}} command, estimate the parameters of the model
+				of \textcolor{red!50}{\textbf{section 17.4}}, using \textcolor{blue}{\textbf{hhincome}} as the sole variable determining the
+				variance. Test the null hypothesis of homoskedastic probit.
+			\end{block}
+		\end{frame}
+	% Section 7
+	\section{Exercise 7}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 7}
+			\begin{block}{Exercise 7}
+				Using the example in \textcolor{red!50}{\textbf{section 17.10}} as a template, estimate a grouped
+				logistic regression using \textcolor{blue}{\textbf{educyear}} as the grouping variable. Comment
+				on what you regard as unsatisfactory features of the grouping variable
+				and the results.
+			\end{block}
+		\end{frame}
+	% References
+	\begin{frame}[t,allowframebreaks]
+		\frametitle{References}
+		\bibliography{biblio.bib}
+		% Style
+		\bibliographystyle{apalike}
+		% Authors
+		\nocite{cameron2022-I}
+		\nocite{cameron2022-II}
+	\end{frame}
+	% Cover
+	\begin{frame}
+		\maketitle
+	\end{frame}
+\end{document}
