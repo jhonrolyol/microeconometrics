@@ -1,0 +1,169 @@
+% Preamble
+\documentclass[11pt, aspectratio=169]{beamer}
+	% Packages
+	\usepackage[english]{babel}
+	\usepackage{lipsum}
+	\usepackage{mathptmx}
+	\usepackage{xcolor}
+	% Themes
+	\usefonttheme[onlymath]{serif}
+	\usetheme[nofirafonts]{focus}
+	\renewcommand{\thempfootnote}{\arabic{mpfootnote}}
+	% Cover
+	\title{Microeconometrics Using Stata}
+	\subtitle{Data management and graphics: Exercises}
+	\author{
+		Jhon R. Ordoñez
+		\footnote{\label{1} National University of San Cristóbal de Huamanga}
+		\footnote{\label{2} Faculty of Economic, Administrative and Accounting Sciences}
+		\footnote{\label{3} Professional School of Economics}
+	}
+	\date{\today}
+% Body
+\begin{document}
+	% Cover
+	\begin{frame}
+		\maketitle
+	\end{frame}
+	% Outline
+	\begin{frame}[t]
+		\frametitle{Outline}
+		\tableofcontents
+	\end{frame}
+	% Section 1
+	\section{Exercise 1}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 1}
+				\begin{block}{Exercise 1}
+					Type the command \textcolor{blue}{\textbf{display \%10.5f 123.321}}. Compare the results with
+					those you obtain when you change the format \textcolor{blue}{\textbf{\%10.5f}} to, respectively,
+					\textcolor{blue}{\textbf{\%10.5e}}, \textcolor{blue}{\textbf{\%10.5g}}, \textcolor{blue}{\textbf{\%-10.5f}}, 
+					and \textcolor{blue}{\textbf{\%10,5f}} and when you do not specify a format.
+				\end{block}
+		\end{frame}
+	% Section 2
+	\section{Exercise 2}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 2}
+			\begin{block}{Exercise 2}
+				Consider the example of \textcolor{red!50}{\textbf{section 2.3}} except with the variables
+				reordered. Specifically, the variables are in the order \textcolor{blue}{\textbf{age}}, \textcolor{blue}{\textbf{name}},
+				\textcolor{blue}{\textbf{income}}, and \textcolor{blue}{\textbf{female}}.
+				The three observations are \textcolor{blue}{\textbf{29  “Barry" 40.990 0}}; \textcolor{blue}{\textbf{30  “Carrie" 37.000 1}}; and
+				\textcolor{blue}{\textbf{31  “Gary" 48.000 0}}. Use \textcolor{blue}{\textbf{input}} to
+				read these data, along with names, into Stata, and list the results. Use a
+				text editor to create a comma-separated values file that includes
+				variable names in the first line, read this file into Stata by using \textcolor{blue}{\textbf{import}}
+				\textcolor{blue}{\textbf{delimited}}, and list the results. Then, drop the first line in the text file,
+				read in the data by using \textcolor{blue}{\textbf{import delimited}} with variable names
+				assigned, and list the results. Finally, replace the commas in the text
+				file with blanks, read the data in by using \textcolor{blue}{\textbf{infix}}, and list the results.
+			\end{block}
+		\end{frame}
+	% Section 3
+	\section{Exercise 3}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 3}
+			\begin{block}{Exercise 3}
+				Consider the dataset in \textcolor{red!50}{\textbf{section 2.4.}} The \textcolor{blue}{\textbf{er32049}} 
+				variable is the last known marital status. Rename this variable as \textcolor{blue}{\textbf{marstatus}}, give the
+				variable the label “marital status”, and tabulate \textcolor{blue}{\textbf{marstatus}}. From the
+				codebook, marital status is married (1), never married (2), widowed
+				(3), divorced or annulment (4), separated (5), not answered or do not
+				know (8), and no marital history collected (9). Set \textcolor{blue}{\textbf{marstatus}} to
+				missing where appropriate. Use \textcolor{blue}{\textbf{label define}} and \textcolor{blue}{\textbf{label values}} to
+				provide descriptions for the remaining categories, and tabulate
+				\textcolor{blue}{\textbf{marstatus}}. Create a binary indicator variable equal to 1 if the last
+				known marital status is married and equal to 0 otherwise, with
+				appropriate handling of any missing data. Provide a summary of
+				earnings by marital status. Create a set of indicator variables for
+				marital status based on \textcolor{blue}{\textbf{marstatus}}. Create a set of variables that
+				interact these marital status indicators with earnings.
+			\end{block}
+		\end{frame}
+	% Section 4
+	\section{Exercise 4}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 4}
+			\begin{block}{Exercise 4}
+				Consider the dataset in \textcolor{red!50}{\textbf{section 2.6.}} Create a box-and-whisker plot of
+				\textcolor{blue}{\textbf{earnings}} (in levels) for all the data and for each year of educational
+				attainment (use variable \textcolor{blue}{\textbf{education}}). Create a histogram of \textcolor{blue}{\textbf{earnings}}
+				(in levels) using $100$ bins and a kernel density estimate. Do earnings in
+				levels appear to be right skewed? Create a scatterplot of \textcolor{blue}{\textbf{earnings}}
+				against \textcolor{blue}{\textbf{education}}. Provide a single figure that uses \textcolor{blue}{\textbf{scatterplot}},
+				\textcolor{blue}{\textbf{lfit}}, and \textcolor{blue}{\textbf{lowess}} of \textcolor{blue}{\textbf{earnings}} against \textcolor{blue}{\textbf{education}}. Add titles for the
+				axes and graph heading.
+			\end{block}
+		\end{frame}
+	% Section 5
+	\section{Exercise 5}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 5}
+			\begin{block}{Exercise 5}
+				 Consider the dataset in \textcolor{red}{\textbf{section 2.6.}} Create kernel density plots for
+				lnearns using the kernel(epan2) option with kernel 
+					\begin{equation*}
+						K(z) = \dfrac{3}{5}\left(1 - \dfrac{z^{2}}{5}\right)
+					\end{equation*}
+				for $|z| < 1$ and using the \textcolor{blue}{\textbf{kernel(rectangle)}} option with kernel
+				$K(z) = 1/2$ for $|z| < 1$. Repeat with the bandwidth increased from the default to 0.3. What
+				makes a bigger difference, choice of kernel or choice of bandwidth?
+				The comparison is easier if the four graphs are saved using the
+				\textcolor{blue}{\textbf{saving()}} option and then combined using the \textcolor{blue}{\textbf{graph combine}} command.
+			\end{block}
+		\end{frame}
+	% Section 6
+	\section{Exercise 6}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 6}
+			\begin{block}{Exercise 6}
+				Consider the dataset in \textcolor{red!50}{\textbf{section 2.6.}} For each of the available kernels
+				that can be used with the \textcolor{blue}{\textbf{kdensity}} command, obtain a kernel density
+				plot for \textcolor{blue}{\textbf{lnearns}} using the default bandwidth, and save the graph using
+				the \textcolor{blue}{\textbf{saving()}} option. Then, combine all graphs on one page using the
+				\textcolor{blue}{\textbf{graph combine}} command and options such as \textcolor{blue}{\textbf{rows(4) ysize(8) xsize(5)}}.
+				Comment on the relative smoothness of the various graphs.
+			\end{block}
+		\end{frame}
+	% Section 7
+	\section{Exercise 7}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 7}
+			\begin{block}{Exercise 7}
+				Consider the dataset in \textcolor{blue}{\textbf{section 2.6.}} Perform lowess regression of
+				\textcolor{blue}{\textbf{lnearns}} on \textcolor{blue}{\textbf{hours}} using the default bandwidth and using bandwidth of
+				$0.01$. Does the bandwidth make a difference? A moving average $y$ of 
+				after data are sorted by $x$ is a simple case of nonparametric regression
+				of $y$ on $x$ . Sort the data by \textcolor{blue}{\textbf{hours}}. Create a centered $25$-period moving
+				average of \textcolor{blue}{\textbf{lnearns}} with $i$th observation
+					\begin{equation*}
+						yma_{i} = \dfrac{1}{25} \sum\limits_{j=-12}^{j=12}y_{i+j}
+					\end{equation*}
+				This is easiest using \textcolor{blue}{\textbf{forvalues}}. Plot this moving average against
+				\textcolor{blue}{\textbf{hours}} using the \textcolor{blue}{\textbf{twoway connected}} graph command. Compare with the
+				lowess plot.
+			\end{block}
+		\end{frame}
+	% References
+	\begin{frame}[t,allowframebreaks]
+		\frametitle{References}
+		\bibliography{biblio.bib}
+		% Style
+		\bibliographystyle{apalike}
+		% Authors
+		\nocite{cameron2022-I}
+		\nocite{cameron2022-II}
+	\end{frame}
+	% Cover
+	\begin{frame}
+		\maketitle
+	\end{frame}
+\end{document}

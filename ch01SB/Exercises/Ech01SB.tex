@@ -1,0 +1,148 @@
+% Preamble
+\documentclass[11pt, aspectratio=169]{beamer}
+	% Packages
+	\usepackage[english]{babel}
+	\usepackage{lipsum}
+	\usepackage{mathptmx}
+	\usepackage{xcolor}
+	\usepackage{hyperref}
+	\usepackage{url}
+	\usepackage{multicol}
+	% Themes
+	\usefonttheme[onlymath]{serif}
+	\usetheme[nofirafonts]{focus}
+	\renewcommand{\thempfootnote}{\arabic{mpfootnote}}
+	% Cover
+	\title{Microeconometrics Using Stata}
+	\subtitle{Stata Basics: Exercises}
+	\author{
+		Jhon R. Ordoñez
+		\footnote{\label{1} National University of San Cristóbal de Huamanga}
+		\footnote{\label{2} Faculty of Economic, Administrative and Accounting Sciences}
+		\footnote{\label{3} Professional School of Economics}
+	}
+	\date{\today}
+% Body
+\begin{document}
+	% Cover
+	\begin{frame}
+		\maketitle
+	\end{frame}
+	% Outline
+	\begin{frame}[t]
+		\frametitle{Outline}
+		%\begin{multicols}{2}
+			\tableofcontents
+		%\end{multicols}
+	\end{frame}
+	% Section 1
+	\section{Exercise 1}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 1}
+				\begin{block}{Exercise 1}
+					Find information on the estimation method \textcolor{blue}{\textbf{clogit}} using \textcolor{blue}{\textbf{help}} and
+					\textcolor{blue}{\textbf{search}}. Comment on the relative usefulness of these search commands.
+				\end{block}
+		\end{frame}
+	% Section 2
+	\section{Exercise 2}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 2}
+			\begin{block}{Exercise 2}
+				Download the Stata example dataset \textcolor{blue}{\textbf{auto.dta}}. Obtain summary
+				statistics for \textcolor{blue}{\textbf{mpg}} and \textcolor{blue}{\textbf{weight}} according 
+				to whether the car type is foreign (use the \textcolor{blue}{\textbf{by foreign}}: prefix). Comment on any differences
+				between foreign and domestic cars. Then, \textcolor{blue}{\textbf{regressmpg}} on \textcolor{blue}{\textbf{weight}} and
+				\textcolor{blue}{\textbf{foreign}}. Comment on any difference for foreign cars.
+			\end{block}
+		\end{frame}
+	% Section 3
+	\section{Exercise 3}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 3}
+			\begin{block}{Exercise 3}
+				Write a do-file to repeat the previous question. This do-file should
+				include a log file. Run the do-file, and then use a text editor to view the
+				log file.
+			\end{block}
+		\end{frame}
+	% Section 4
+	\section{Exercise 4}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 4}
+			\begin{block}{Exercise 4}
+				Using \textcolor{blue}{\textbf{auto.dta}}, obtain summary statistics for the \textcolor{blue}{\textbf{price}} variable.
+				Then, use the results stored in \textcolor{blue}{\textbf{r()}} to compute a scalar, \textcolor{blue}{\textbf{cv}}, equal to the
+				coefficient of variation (the standard deviation divided by the mean) of \textcolor{blue}{\textbf{price}}.
+			\end{block}
+		\end{frame}
+	% Section 5
+	\section{Exercise 5}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 5}
+			\begin{block}{Exercise 5}
+				Using \textcolor{blue}{\textbf{auto.dta}}, \textcolor{blue}{\textbf{regress mpg}} on \textcolor{blue}{\textbf{price}} and \textcolor{blue}{\textbf{weight}}. Then, use the
+				results stored in \textcolor{blue}{\textbf{e()}} to compute a scalar, \textcolor{blue}{\textbf{r2adj}}, equal to $\bar{R}^{2}$.
+				The adjusted $R^{2}$ equals 
+					\begin{equation*}
+						\bar{R}^{2} = R^{2} - (1 - R^{2}) \left(\dfrac{K-1}{N - K}\right)
+					\end{equation*}
+				where $N$ is the number of observations and $K$ is the number of regressors including
+				the intercept. Also, use the results stored in \textcolor{blue}{\textbf{e()}} to calculate a scalar,
+				\textcolor{blue}{\textbf{tweight}}, equal to the $t$ statistic to test that the coefficient of \textcolor{blue}{\textbf{weight}} is zero.
+			\end{block}
+		\end{frame}
+	% Section 6
+	\section{Exercise 6}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 6}
+			\begin{block}{Exercise 6}
+				Using \textcolor{blue}{\textbf{auto.dta}}, define a global macro named \textcolor{blue}{\textbf{varlist}} for a variable
+				list with \textcolor{blue}{\textbf{mpg}}, \textcolor{blue}{\textbf{price}}, and \textcolor{blue}{\textbf{weight}}, and then obtain summary statistics
+				for \textcolor{blue}{\textbf{varlist}}. Repeat this exercise for a local macro named \textcolor{blue}{\textbf{varlist}}.
+			\end{block}
+		\end{frame}
+	% Section 7
+	\section{Exercise 7}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 7}
+			\begin{block}{Exercise 7}
+				Using \textcolor{blue}{\textbf{auto.dta}}, use a \textcolor{blue}{\textbf{foreach}} loop to create a variable, \textcolor{blue}{\textbf{total}}, equal
+				to the sum of \textcolor{blue}{\textbf{headroom}} and \textcolor{blue}{\textbf{length}}. Confirm by using \textcolor{blue}{\textbf{summarize}} that
+				\textcolor{blue}{\textbf{total}} has a mean equal to the sum of the means of \textcolor{blue}{\textbf{headroom}} and \textcolor{blue}{\textbf{length}}.
+			\end{block}
+		\end{frame}
+	% Section 8
+	\section{Exercise 8}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 8}
+			\begin{block}{Exercise 8}
+				Create a simulated dataset with $100$ observations on two random
+				variables that are each drawn from the uniform distribution. Use a seed
+				of $12345$. In theory, these random variables have a mean of $0.5$ and a
+				variance of $1/12$. Does this appear to be the case here? 
+			\end{block}
+		\end{frame}
+	% References
+	\begin{frame}[t,allowframebreaks]
+		\frametitle{References}
+		\bibliography{biblio.bib}
+		% Style
+		\bibliographystyle{apalike}
+		% Authors
+		\nocite{cameron2022-I}
+		\nocite{cameron2022-II}
+	\end{frame}
+	% Cover
+	\begin{frame}
+		\maketitle
+	\end{frame}
+\end{document}

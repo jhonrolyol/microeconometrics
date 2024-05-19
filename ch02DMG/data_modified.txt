@@ -1,0 +1,5 @@
+age,name,income,female
+29,"Barry",40.990,0
+30,"Carrie",37.000,1
+31,"Gary",48.000,0
+
