@@ -1,0 +1,105 @@
+% Preamble
+\documentclass[11pt, aspectratio=169]{beamer}
+	% Packages
+	\usepackage[english]{babel}
+	\usepackage{lipsum}
+	\usepackage{mathptmx}
+	\usepackage{xcolor}
+	% Themes
+	\usefonttheme[onlymath]{serif}
+	\usetheme[nofirafonts]{focus}
+	\renewcommand{\thempfootnote}{\arabic{mpfootnote}}
+	% Cover
+	\title{Microeconometrics Using Stata}
+	\subtitle{Linear regression basics: Exercises}
+	\author{
+		Jhon R. Ordoñez
+		\footnote{\label{1} National University of San Cristóbal de Huamanga}
+		\footnote{\label{2} Faculty of Economic, Administrative and Accounting Sciences}
+		\footnote{\label{3} Professional School of Economics}
+	}
+	\date{\today}
+% Body
+\begin{document}
+	% Cover
+	\begin{frame}
+		\maketitle
+	\end{frame}
+	% Outline
+	\begin{frame}[t]
+		\frametitle{Outline}
+		\tableofcontents
+	\end{frame}
+	% Section 1
+	\section{Exercise 1}
+		% Slide 1.1
+		\begin{frame}
+			\frametitle{Exercise 1}
+				\begin{block}{Exercise 1}
+					Fit the model in \textcolor{red!50}{\textbf{section 3.5}} using only the first $100$ observations.
+					Compute standard errors in three ways: default, heteroskedastic, and
+					cluster-robust where clustering is on the number of chronic problems.
+					Use \textcolor{blue}{\textbf{estimates}} to produce a table with three sets of coefficients and
+					standard errors, and comment on any appreciable differences in the
+					standard errors. Construct a similar table for three alternative sets of
+					heteroskedasticity-robust standard errors, obtained by using the
+					\textcolor{blue}{\textbf{vce(robust)}}, \textcolor{blue}{\textbf{vce(hc2)}}, and \textcolor{blue}{\textbf{vce(hc3)}} options, and comment on any
+					differences between the different estimates of the standard errors.
+				\end{block}
+		\end{frame}
+	% Section 2
+	\section{Exercise 2}
+		% Slide 2.1
+		\begin{frame}
+			\frametitle{Exercise 2}
+			\begin{block}{Exercise 2}
+				Fit the model in \textcolor{red!50}{\textbf{section 3.5}} with robust standard errors reported. Test
+				at $5\%$ the joint significance of the demographic variables \textcolor{blue}{\textbf{age}}, \textcolor{blue}{\textbf{female}},
+				and \textcolor{blue}{\textbf{income}}. Test the hypothesis that being male (rather than female)
+				has the same impact on medical expenditures as aging 10 years. Fit the
+				model under the constraint that $\beta_{phylim} = \beta_{actlim}$ by first typing
+				\textcolor{blue}{\textbf{constraint 1 phylim = actlim}} and then by using \textcolor{blue}{\textbf{cnsreg}} with the
+				\textcolor{blue}{\textbf{constraints(1)}} option.
+			\end{block}
+		\end{frame}
+	% Section 3
+	\section{Exercise 3}
+		% Slide 3.1
+		\begin{frame}
+			\frametitle{Exercise 3}
+			\begin{block}{Exercise 3}
+				Fit the model in \textcolor{red!50}{\textbf{section 3.6}}, and implement the RESET test manually by
+				regressing $y$ on $x$ and $\hat{y}^{2}$, $\hat{y}^{3}$, and $\hat{y}^{4}$ and jointly testing that the
+				coefficients of $\hat{y}^{2}$, $\hat{y}^{3}$, and $\hat{y}^{4}$ are $0$. 
+				To get the same results as \textcolor{blue}{\textbf{estat ovtest}}, 
+				do you need to use default or robust estimates of the \textbf{VCE} in
+				this regression? Comment. Similarly, implement \textcolor{blue}{\textbf{linktest}} by
+				regressing $y$ on $\hat{y}$ and $\hat{y}^{2}$ and testing that the coefficient of $\hat{y}^{2}$ is $0$. To
+				get the same results as \textcolor{blue}{\textbf{linktest}}, do you need to use default or robust
+				estimates of the \textbf{VCE} in this regression? Comment.
+			\end{block}
+		\end{frame}
+	% Section 4
+	\section{Exercise 4}
+		% Slide 4.1
+		\begin{frame}
+			\frametitle{Exercise 4}
+			\begin{block}{Exercise 4}
+				a
+			\end{block}
+		\end{frame}
+	% References
+	\begin{frame}[t,allowframebreaks]
+		\frametitle{References}
+		\bibliography{biblio.bib}
+		% Style
+		\bibliographystyle{apalike}
+		% Authors
+		\nocite{cameron2022-I}
+		\nocite{cameron2022-II}
+	\end{frame}
+	% Cover
+	\begin{frame}
+		\maketitle
+	\end{frame}
+\end{document}

@@ -1,0 +1,144 @@
+% Preamble
+\documentclass[11pt, aspectratio=169]{beamer}
+	% Packages
+	\usepackage[english]{babel}
+	\usepackage{lipsum}
+	\usepackage{mathptmx}
+	\usepackage{xcolor}
+	% Themes
+	\usefonttheme[onlymath]{serif}
+	\usetheme[nofirafonts]{focus}
+	\renewcommand{\thempfootnote}{\arabic{mpfootnote}}
+	% Cover
+	\title{Microeconometrics Using Stata}
+	\subtitle{Linear regression extensions: Exercises}
+	\author{
+		Jhon R. Ordoñez
+		\footnote{\label{1} National University of San Cristóbal de Huamanga}
+		\footnote{\label{2} Faculty of Economic, Administrative and Accounting Sciences}
+		\footnote{\label{3} Professional School of Economics}
+	}
+	\date{\today}
+% Body
+\begin{document}
+	% Cover
+	\begin{frame}
+		\maketitle
+	\end{frame}
+	% Outline
+	\begin{frame}[t]
+		\frametitle{Outline}
+		\tableofcontents
+	\end{frame}
+	% Section 1
+	\section{Exercise 1}
+		% Slide 1.1
+		\begin{frame}
+			\frametitle{Exercise 1}
+				\begin{block}{Exercise 1}
+					Fit the model in \textcolor{red!50}{\textbf{section 4.2}} on levels, except use all observations
+					rather than those with just positive expenditures, and report robust
+					standard errors. Predict medical expenditures. Use \textcolor{blue}{\textbf{correlate}} to obtain
+					the correlation coefficient between the actual and fitted value, and
+					show that, upon squaring, this equals $R^{2}$. Show that for the linear
+					model \textcolor{blue}{\textbf{margins}} with the \textcolor{blue}{\textbf{dydx(*)}} option reproduces the \textbf{OLS}
+					coefficients. Now, use \textcolor{blue}{\textbf{margins}} with an appropriate option to obtain
+					the average income elasticity of medical expenditures.
+				\end{block}
+		\end{frame}
+	% Section 2
+	\section{Exercise 2}
+		% Slide 2.1
+		\begin{frame}
+			\frametitle{Exercise 2}
+			\begin{block}{Exercise 2}
+				Consider the example of \textcolor{red!50}{\textbf{section 4.2.4}} and the third method that
+				computes predictions at \textcolor{blue}{\textbf{suppins==1}} for all observations and at
+				\textcolor{blue}{\textbf{suppins==0}} and then compares the average predictions. The text did
+				this following OLS regression in levels and obtained an estimated
+				treatment effect of $\$725$. Repeat this example but with predictions
+				from the log-linear model that correct for retransformation bias using
+				Duan’s method. You should obtain an estimate of $\$2,048$.
+			\end{block}
+		\end{frame}
+	% Section 3
+	\section{Exercise 3}
+		% Slide 3.1
+		\begin{frame}
+			\frametitle{Exercise 3}
+			\begin{block}{Exercise 3}
+				Fit the model in \textcolor{red!50}{\textbf{section 4.2}} on levels, using the first $2,000$
+				observations. Use these estimates to predict medical expenditures for
+				the remaining $1,064$ observations, and compare these with the actual
+				values. Note that the model predicts very poorly in part because the
+				data were ordered by \textcolor{blue}{\textbf{totexp}}.
+			\end{block}
+		\end{frame}
+	% Section 4
+	\section{Exercise 4}
+		% Slide 4.1
+		\begin{frame}
+			\frametitle{Exercise 4}
+			\begin{block}{Exercise 4}
+				Reconsider the out-of-sample prediction analysis of \textcolor{red!50}{\textbf{section 4.3.}}
+				Modify the \textbf{DGP} such that the regression intercept for the last $10$
+				observations is $5$, whereas it is fixed at $1$ for the first $90$ observations.
+				Generate $10$ out-of-sample predictions, and compare them with the
+				case in which no such intercept shift occurs.
+			\end{block}
+		\end{frame}
+	% Section 5
+	\section{Exercise 5}
+		% Slide 5.1
+		\begin{frame}
+			\frametitle{Exercise 5}
+			\begin{block}{Exercise 5}
+				Repeat the analysis of the previous question but under the assumption
+				that the intercept remains unchanged in the prediction period but the
+				slope parameter increases or decreases by $20\%$. Compare the results
+				with the no-change scenario.
+			\end{block}
+		\end{frame}
+	% Section 6
+	\section{Exercise 6}
+		% Slide 6.1
+		\begin{frame}
+			\frametitle{Exercise 6}
+			\begin{block}{Exercise 6}
+				Refer to the empirical example of \textcolor{blue}{\textbf{section 4.3.}} Define two group-specific
+				indicator variables, \textcolor{blue}{\textbf{d1}} for the female group and \textcolor{blue}{\textbf{d2}} for the
+				male group. Sort the sample observations by group; females are in group 1. 
+				Using the full sample, run the earnings regression given in the section; include \textcolor{blue}{\textbf{d1}} and \textcolor{blue}{\textbf{d2}} group indicators, but exclude the intercept
+				term. Test the hypothesis that the coefficients of \textcolor{blue}{\textbf{d1}} and \textcolor{blue}{\textbf{d2}} are equal.
+			\end{block}
+		\end{frame}
+	% Section 7
+	\section{Exercise 7}
+		% Slide 7.1
+		\begin{frame}
+			\frametitle{Exercise 7}
+			\begin{block}{Exercise 7}
+				This is a continuation of the previous question. Replace regressors in
+				the regression by new ones generated by multiplying the original
+				regressors by \textcolor{blue}{\textbf{d1}} and \textcolor{blue}{\textbf{d2}}. 
+				The new regressors are group specific.
+				Regress the earnings variable on the new generated group-specific
+				regressors. Use the \textcolor{blue}{\textbf{test}} command to test for the equality of the two
+				sets of group-specific coefficients.
+			\end{block}
+		\end{frame}
+	% References
+	\begin{frame}[t,allowframebreaks]
+		\frametitle{References}
+		\bibliography{biblio.bib}
+		% Style
+		\bibliographystyle{apalike}
+		% Authors
+		\nocite{cameron2022-I}
+		\nocite{cameron2022-II}
+	\end{frame}
+	% Cover
+	\begin{frame}
+		\maketitle
+	\end{frame}
+\end{document}
