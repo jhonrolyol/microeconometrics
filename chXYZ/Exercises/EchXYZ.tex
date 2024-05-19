@@ -1,0 +1,73 @@
+% Preamble
+\documentclass[11pt, aspectratio=169]{beamer}
+	% Packages
+	\usepackage[english]{babel}
+	\usepackage{lipsum}
+	\usepackage{mathptmx}
+	\usepackage{xcolor}
+	% Themes
+	\usefonttheme[onlymath]{serif}
+	\usetheme[nofirafonts]{focus}
+	\renewcommand{\thempfootnote}{\arabic{mpfootnote}}
+	% Cover
+	\title{Microeconometrics Using Stata}
+	\subtitle{Linear regression basics: Exercises}
+	\author{
+		Jhon R. Ordoñez
+		\footnote{\label{1} National University of San Cristóbal de Huamanga}
+		\footnote{\label{2} Faculty of Economic, Administrative and Accounting Sciences}
+		\footnote{\label{3} Professional School of Economics}
+	}
+	\date{\today}
+% Body
+\begin{document}
+	% Cover
+	\begin{frame}
+		\maketitle
+	\end{frame}
+	% Outline
+	\begin{frame}[t]
+		\frametitle{Outline}
+		\tableofcontents
+	\end{frame}
+	% Section 1
+	\section{Exercise 1}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 1}
+				\begin{block}{Exercise 1}
+					Fit the model in \textcolor{red!50}{\textbf{section 3.5}} using only the first $100$ observations.
+					Compute standard errors in three ways: default, heteroskedastic, and
+					cluster-robust where clustering is on the number of chronic problems.
+					Use \textcolor{blue}{\textbf{estimates}} to produce a table with three sets of coefficients and
+					standard errors, and comment on any appreciable differences in the
+					standard errors. Construct a similar table for three alternative sets of
+					heteroskedasticity-robust standard errors, obtained by using the
+					\textcolor{blue}{\textbf{vce(robust)}}, \textcolor{blue}{\textbf{vce(hc2)}}, and \textcolor{blue}{\textbf{vce(hc3)}} options, and comment on any
+					differences between the different estimates of the standard errors.
+				\end{block}
+		\end{frame}
+	% Section 2
+	\section{Exercise 2}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 2}
+			\begin{block}{Exercise 2}
+				a
+			\end{block}
+		\end{frame}
+	% References
+	\begin{frame}[t,allowframebreaks]
+		\frametitle{References}
+		\bibliography{biblio.bib}
+		% Style
+		\bibliographystyle{apalike}
+		% Authors
+		\nocite{cameron2022-I}
+		\nocite{cameron2022-II}
+	\end{frame}
+	% Cover
+	\begin{frame}
+		\maketitle
+	\end{frame}
+\end{document}
