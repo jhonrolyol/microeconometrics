@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.11.25) (preloaded format=pdflatex 2023.9.17)  21 MAY 2024 03:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.11.25) (preloaded format=pdflatex 2023.9.17)  21 MAY 2024 03:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./Ech17BOM.tex
-(Ech17BOM.tex
+**./Ech18MM.tex
+(Ech18MM.tex
 LaTeX2e <2022-11-01>
 L3 programming layer <2022-11-02>
 (C:\Users\PC\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamer.cls
@@ -955,7 +955,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\footnote' on input line 20.
 
-(Ech17BOM.aux
+(Ech18MM.aux
 
 LaTeX Warning: Label `1' multiply defined.
 
@@ -966,7 +966,7 @@ LaTeX Warning: Label `2' multiply defined.
 LaTeX Warning: Label `3' multiply defined.
 
 )
-\openout1 = `Ech17BOM.aux'.
+\openout1 = `Ech18MM.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
 LaTeX Font Info:    ... okay on input line 23.
@@ -1107,7 +1107,7 @@ Dictionary: translator-numbers-dictionary, Language: English
 (C:\Users\PC\AppData\Local\Programs\MiKTeX\tex/latex/translator\translator-theo
 rem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
-) (Ech17BOM.nav)
+) (Ech18MM.nav)
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <20.74> not available
 (Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 27.
@@ -1168,19 +1168,19 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <12> not available
 
 [1
 
-{C:/Users/PC/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (Ech17BOM.toc) 
-[2
+{C:/Users/PC/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (Ech18MM.toc) [
+2
 
 ] [3
 
-]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 49.
- [4
+] [4
 
 ] [5
 
-] [6
+]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 65.
+ [6
 
 ] [7
 
@@ -1194,16 +1194,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 
 ] [12
 
-] [13
-
-] [14
-
-] [15
-
-] [16
-
-]
-(Ech17BOM.bbl
+] (Ech18MM.bbl
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <10> not available
 (Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 1.
@@ -1220,7 +1211,7 @@ LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
 LaTeX Font Warning: Font shape `OT1/cmss/bx/scit' undefined
 (Font)              using `OT1/cmss/bx/it' instead on input line 11.
 
-) [17
+) [13
 
  <C:/Users/PC/AppData/Local/Programs/MiKTeX/tex/latex/beamer/beamericonarticle.
 pdf>]
@@ -1228,32 +1219,32 @@ pdfTeX warning (ext4): destination with the same identifier (name{1}) has been
 already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.136 	\end{frame}
+l.123 	\end{frame}
                   
 pdfTeX warning (ext4): destination with the same identifier (name{2}) has been 
 already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.136 	\end{frame}
+l.123 	\end{frame}
                   
 pdfTeX warning (ext4): destination with the same identifier (name{3}) has been 
 already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.136 	\end{frame}
-                   [18
+l.123 	\end{frame}
+                   [14
 
 ]
 \tf@nav=\write5
-\openout5 = `Ech17BOM.nav'.
+\openout5 = `Ech18MM.nav'.
 
 \tf@toc=\write6
-\openout6 = `Ech17BOM.toc'.
+\openout6 = `Ech18MM.toc'.
 
 \tf@snm=\write7
-\openout7 = `Ech17BOM.snm'.
+\openout7 = `Ech18MM.snm'.
 
- (Ech17BOM.aux)
+ (Ech18MM.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1262,25 +1253,26 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 26974 strings out of 475284
- 547466 string characters out of 2775521
- 935679 words of memory out of 3000000
- 47841 multiletter control sequences out of 15000+600000
- 501486 words of font info for 111 fonts, out of 8000000 for 9000
+ 26945 strings out of 475284
+ 547107 string characters out of 2775521
+ 935541 words of memory out of 3000000
+ 47818 multiletter control sequences out of 15000+600000
+ 503622 words of font info for 115 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,16n,122p,442b,905s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 128i,16n,122p,441b,905s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/PC/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Us
 ers/PC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
-><C:/Users/PC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss
+><C:/Users/PC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi
 10.pfb><C:/Users/PC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
-m/cmss12.pfb><C:/Users/PC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmss8.pfb><C:/Users/PC/AppData/Local/Programs/MiKTeX/fonts/type1/public
-/amsfonts/cm/cmss9.pfb><C:/Users/PC/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmssbx10.pfb><C:/Users/PC/AppData/Local/Programs/MiKTeX/fonts
-/type1/urw/times/utmri8a.pfb>
-Output written on Ech17BOM.pdf (18 pages, 123851 bytes).
+m/cmss10.pfb><C:/Users/PC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmss12.pfb><C:/Users/PC/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/amsfonts/cm/cmss8.pfb><C:/Users/PC/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmss9.pfb><C:/Users/PC/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/PC/AppData/Local/Programs/MiKTeX
+/fonts/type1/urw/times/utmr8a.pfb>
+Output written on Ech18MM.pdf (14 pages, 120842 bytes).
 PDF statistics:
- 204 PDF objects out of 1000 (max. 8388607)
- 49 named destinations out of 1000 (max. 500000)
- 99 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 177 PDF objects out of 1000 (max. 8388607)
+ 39 named destinations out of 1000 (max. 500000)
+ 83 words of extra memory for PDF output out of 10000 (max. 10000000)
 

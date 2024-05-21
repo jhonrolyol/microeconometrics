@@ -1,0 +1,124 @@
+% Preamble
+\documentclass[11pt, aspectratio=169]{beamer}
+	% Packages
+	\usepackage[english]{babel}
+	\usepackage{lipsum}
+	\usepackage{mathptmx}
+	\usepackage{xcolor}
+	% Themes
+	\usefonttheme[onlymath]{serif}
+	\usetheme[nofirafonts]{focus}
+	\renewcommand{\thempfootnote}{\arabic{mpfootnote}}
+	% Cover
+	\title{Microeconometrics Using Stata}
+	\subtitle{Multinomial models}
+	\author{
+		Jhon R. Ordoñez
+		\footnote{\label{1} National University of San Cristóbal de Huamanga}
+		\footnote{\label{2} Faculty of Economic, Administrative and Accounting Sciences}
+		\footnote{\label{3} Professional School of Economics}
+	}
+	\date{\today}
+% Body
+\begin{document}
+	% Cover
+	\begin{frame}
+		\maketitle
+	\end{frame}
+	% Outline
+	\begin{frame}[t]
+		\frametitle{Outline}
+		\tableofcontents
+	\end{frame}
+	% Section 1
+	\section{Exercise 1}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 1}
+				\begin{block}{Exercise 1}
+					Consider the health-status multinomial example of \textcolor{red!50}{\textbf{section 18.9}}.Refit
+					this as a \textbf{MNL} model using the \textcolor{blue}{\textbf{mlogit}} command. Comment on the
+					statistical significance of regressors. Obtain the \textbf{MEs} of changes in the
+					regressors on the probability of excellent health for the \textbf{MNL} model, and
+					compare these to those given in \textcolor{blue}{\textbf{section 18.9.5}} for the ordered logit
+					model. Using Bayesian information criterion, which model do you
+					prefer for these data - \textbf{MNL} or ordered logit?
+				\end{block}
+		\end{frame}
+	% Section 2
+	\section{Exercise 2}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 2}
+			\begin{block}{Exercise 2}
+				Consider the CL example of \textcolor{red!50}{\textbf{section 18.5}}. Use \textcolor{blue}{\textbf{mus218hk.dta}}, if
+				necessary to create this file as in \textcolor{red!50}{\textbf{section 18.5.1}}. Drop the charter boat
+				option as in \textcolor{red!50}{\textbf{section 18.7.5}}, using \textcolor{blue}{\textbf{drop if fishmode=="charter"
+				mode==4}}, so we have a three-choice model. Estimate the parameters of
+				a \textbf{CL} model with regressors \textcolor{blue}{\textbf{p}} and \textcolor{blue}{\textbf{q}} and income, using the \textcolor{blue}{\textbf{cmclogit}}
+				command. What are the \textbf{MEs} on the probability of private boat fishing
+				of a $\$10$ increase in the price of private boat fishing, a one-unit change
+				in the catch rate from private boat fishing, and a $\$1,000$ increase in
+				monthly income? Which model fits these data better-the \textbf{CL} model of
+				this question or the \textbf{MNP} model of \textcolor{red!50}{\textbf{section 18.7}}?
+			\end{block}
+		\end{frame}
+	% Section 3
+	\section{Exercise 3}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 3}
+			\begin{block}{Exercise 3}
+				Continue the previous question, a three-choice model for fishing mode.
+				Estimate the parameters of the model by \textbf{NL}, with errors for the utility
+				of pier and beach fishing correlated with each other and uncorrelated
+				with the error for the utility of private boat fishing. Obtain the \textbf{ME} of a
+				change in the price of private boat fishing, adapting the example of
+				\textcolor{red!50}{\textbf{section 18.6.6}}.
+			\end{block}
+		\end{frame}
+	% Section 4
+	\section{Exercise 4}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 4}
+			\begin{block}{Exercise 4}
+				Continue with the fishing data example of \textcolor{red!50}{\textbf{section 18.5}}, with \textcolor{blue}{\textbf{beach}} as
+				the base alternative and \textcolor{blue}{\textbf{income}} as the case variable. Instead of fitting
+				an alternative-specific conditional logit model, fit the random-parameter logit model of \textcolor{blue}{\textbf{section 18.8}} using the \textcolor{blue}{\textbf{cmmixlogit}} command.
+				Is this model a significant improvement on the fixed parameter model?
+				Use the \textcolor{blue}{\textbf{margins}} command to fit the \textbf{ME} of income on the choice of
+				fishing mode. Compare the role of income in this model with that in
+				the model of \textcolor{red!50}{\textbf{section 18.5}}.
+			\end{block}
+		\end{frame}
+	% Section 5
+	\section{Exercise 5}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 5}
+			\begin{block}{Exercise 5}
+				Consider the health-status multinomial example of \textcolor{red!50}{\textbf{section 18.9}}.
+				Estimate the parameters of this model as an ordered probit model using
+				the \textcolor{blue}{\textbf{oprobit}} command. Comment on the statistical significance of
+				regressors. Obtain the \textbf{MEs} for the predicted probability of excellent
+				health for the ordered probit model, and compare these to those given
+				in \textcolor{blue}{\textbf{section 18.9.5}} for the ordered logit model. Which model do you
+				prefer for these data-ordered probit or ordered logit?
+			\end{block}
+		\end{frame}
+	% References
+	\begin{frame}[t,allowframebreaks]
+		\frametitle{References}
+		\bibliography{biblio.bib}
+		% Style
+		\bibliographystyle{apalike}
+		% Authors
+		\nocite{cameron2022-I}
+		\nocite{cameron2022-II}
+	\end{frame}
+	% Cover
+	\begin{frame}
+		\maketitle
+	\end{frame}
+\end{document}
