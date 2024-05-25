@@ -1,0 +1,79 @@
+% Preamble
+\documentclass[11pt, aspectratio=169]{beamer}
+	% Packages
+	\usepackage[english]{babel}
+	\usepackage{lipsum}
+	\usepackage{mathptmx}
+	\usepackage{xcolor}
+	% Themes
+	\usefonttheme[onlymath]{serif}
+	\usetheme[nofirafonts]{focus}
+	\renewcommand{\thempfootnote}{\arabic{mpfootnote}}
+	% Cover
+	\title{Microeconometrics Using Stata}
+	\subtitle{Nonlinear optimization methods}
+	\author{
+		Jhon R. Ordoñez
+		\footnote{\label{1} National University of San Cristóbal de Huamanga}
+		\footnote{\label{2} Faculty of Economic, Administrative and Accounting Sciences}
+		\footnote{\label{3} Professional School of Economics}
+	}
+	\date{\today}
+% Body
+\begin{document}
+	% Cover
+	\begin{frame}
+		\maketitle
+	\end{frame}
+	% Outline
+	\begin{frame}[t]
+		\frametitle{Outline}
+		\tableofcontents
+	\end{frame}
+	% Section 1
+	\section{Exercise 1}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 1}
+				\begin{block}{Exercise 1}
+					Consider estimation of the logit model covered in \textcolor{red!50}{\textbf{section 10.5}} and
+					\textcolor{red!50}{\textbf{chapter 17}}. Then $Q(\mathbf{\beta}) = \sum_{i}\left\{y_{i} \ln{\Lambda_{i}} + \left(1 - y_{i}\right)\Lambda_{i}\right\}$, where
+					$\Lambda_{i} = \Lambda\left(\mathbf{x}_{i}'\mathbf{\beta}\right) = exp\left(\mathbf{x}_{i}'\mathbf{\beta}\right)/ \left\{1 + \mathbf{x}_{i}'\mathbf{\beta}\right\}$. 
+					Show that $g\left(\mathbf{\beta}\right) = \sum_{i}\left(y_{i} - \Lambda_{i}\right)\mathbf{x}_{i}$
+					and $H\left(\mathbf{\beta}\right) = \sum_{i} - \Lambda_{i}\left(1 - \Lambda_{i}\right)\mathbf{x}_{i}\mathbf{x}_{i}'$. 
+					\textcolor{magenta!87}{Hint: \textbf{$\partial \Lambda \left(z\right) / \partial z = \Lambda\left(z\right)\left\{1 - \Lambda\left(z\right)\right\}$}}.
+					Use the data on \textcolor{blue}{\textbf{docvis}} to generate the binary variable \textcolor{blue}{\textbf{d$\_$dv}} for whether there are
+					any doctor visits. Using just 2002 data, as in this chapter, use \textcolor{blue}{\textbf{logit}} to
+					perform logistic regression of the binary variable \textcolor{blue}{\textbf{d$\_$dv}} on \textcolor{blue}{\textbf{private}}, \textcolor{blue}{\textbf{chronic}},
+					\textcolor{blue}{\textbf{female}}, \textcolor{blue}{\textbf{income}}, and an intercept. Obtain robust estimates of the standard
+					errors. You should find that the coefficient of \textcolor{blue}{\textbf{private}}, for example, equals $1.27266$
+					, with a robust standard error of $0.0896928$.
+				\end{block}
+		\end{frame}
+	% Section 2
+	\section{Exercise 2}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 2}
+			\begin{block}{Exercise 2}
+				Adapt the code of \textcolor{red!50}{\textbf{section 16.2.3}} to fit the logit model
+				of exercise $1$ using \textbf{NR} iterations coded in Mata. 
+				\textcolor{magenta!87}{\textbf{Hint:} In defining an $n\times 1$ column vector with entries $\Lambda_{i}$ , you may find it helpful
+				to use the fact that $J(n,1,1)$ creates an $n \times 1$ vector of $1$s}.
+			\end{block}
+		\end{frame}
+	% References
+	\begin{frame}[t,allowframebreaks]
+		\frametitle{References}
+		\bibliography{biblio.bib}
+		% Style
+		\bibliographystyle{apalike}
+		% Authors
+		\nocite{cameron2022-I}
+		\nocite{cameron2022-II}
+	\end{frame}
+	% Cover
+	\begin{frame}
+		\maketitle
+	\end{frame}
+\end{document}
