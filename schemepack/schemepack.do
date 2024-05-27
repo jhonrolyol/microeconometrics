@@ -26,13 +26,3 @@ graph bar mpg, by(foreign)
 graph twoway (scatter mpg price) (lfit mpg price)
 graph box mpg, by(foreign)
 
-
-
-
-
-
-
-
-
-
-
