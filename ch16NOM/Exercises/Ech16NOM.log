@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.11.25) (preloaded format=pdflatex 2023.9.17)  25 MAY 2024 09:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.11.25) (preloaded format=pdflatex 2023.9.17)  7 JUN 2024 06:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1182,6 +1182,43 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 
 ] [6
 
+] [7
+
+] [8
+
+] [9
+
+] [10
+
+] [11
+
+] [12
+
+] [13
+
+] [14
+
+] [15
+
+] [16
+
+] [17
+
+]
+[18
+
+] [19
+
+] [20
+
+] [21
+
+] [22
+
+] [23
+
+] [24
+
 ] (Ech16NOM.bbl
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <10> not available
@@ -1199,7 +1236,7 @@ LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
 LaTeX Font Warning: Font shape `OT1/cmss/bx/scit' undefined
 (Font)              using `OT1/cmss/bx/it' instead on input line 11.
 
-) [7
+) [25
 
  <C:/Users/PC/AppData/Local/Programs/MiKTeX/tex/latex/beamer/beamericonarticle.
 pdf>]
@@ -1207,20 +1244,20 @@ pdfTeX warning (ext4): destination with the same identifier (name{1}) has been
 already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.78 	\end{frame}
-                 
+l.193 	\end{frame}
+                  
 pdfTeX warning (ext4): destination with the same identifier (name{2}) has been 
 already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.78 	\end{frame}
-                 
+l.193 	\end{frame}
+                  
 pdfTeX warning (ext4): destination with the same identifier (name{3}) has been 
 already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.78 	\end{frame}
-                  [8
+l.193 	\end{frame}
+                   [26
 
 ]
 \tf@nav=\write5
@@ -1241,32 +1278,33 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 26912 strings out of 475284
- 546818 string characters out of 2775521
- 937548 words of memory out of 3000000
- 47789 multiletter control sequences out of 15000+600000
+ 27065 strings out of 475284
+ 548588 string characters out of 2775521
+ 937978 words of memory out of 3000000
+ 47897 multiletter control sequences out of 15000+600000
  509483 words of font info for 128 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,16n,122p,442b,905s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/PC/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Us
 ers/PC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
-><C:/Users/PC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi
+><C:/Users/PC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex
 10.pfb><C:/Users/PC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
-m/cmr10.pfb><C:/Users/PC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
-nts/cm/cmss10.pfb><C:/Users/PC/AppData/Local/Programs/MiKTeX/fonts/type1/public
-/amsfonts/cm/cmss12.pfb><C:/Users/PC/AppData/Local/Programs/MiKTeX/fonts/type1/
-public/amsfonts/cm/cmss8.pfb><C:/Users/PC/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmss9.pfb><C:/Users/PC/AppData/Local/Programs/MiKTeX/fo
-nts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/PC/AppData/Local/Programs/M
-iKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/PC/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/PC/AppData/Local/Programs
-/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/PC/AppData/Local/Programs/MiK
-TeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/PC/AppData/Local/Programs/MiKTeX
-/fonts/type1/urw/times/utmr8a.pfb><C:/Users/PC/AppData/Local/Programs/MiKTeX/fo
-nts/type1/urw/times/utmri8a.pfb>
-Output written on Ech16NOM.pdf (8 pages, 155154 bytes).
+m/cmmi10.pfb><C:/Users/PC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmr10.pfb><C:/Users/PC/AppData/Local/Programs/MiKTeX/fonts/type1/public
+/amsfonts/cm/cmss10.pfb><C:/Users/PC/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmss12.pfb><C:/Users/PC/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/amsfonts/cm/cmss8.pfb><C:/Users/PC/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmss9.pfb><C:/Users/PC/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/PC/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/PC/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/PC/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/PC/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/PC/AppData/Local/Programs/
+MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/PC/AppData/Local/Programs/MiK
+TeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Ech16NOM.pdf (26 pages, 205245 bytes).
 PDF statistics:
- 156 PDF objects out of 1000 (max. 8388607)
- 24 named destinations out of 1000 (max. 500000)
- 59 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 309 PDF objects out of 1000 (max. 8388607)
+ 69 named destinations out of 1000 (max. 500000)
+ 131 words of extra memory for PDF output out of 10000 (max. 10000000)
 

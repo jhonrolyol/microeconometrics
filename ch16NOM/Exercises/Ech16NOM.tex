@@ -62,6 +62,121 @@
 				to use the fact that $J(n,1,1)$ creates an $n \times 1$ vector of $1$s}.
 			\end{block}
 		\end{frame}
+	% Section 3
+	\section{Exercise 3}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 3}
+			\begin{block}{Exercise 3}
+				Adapt the code of \textcolor{red!50}{\textbf{section 16.5.3}} to fit the logit model of \textbf{exercise 1} using the
+				\textcolor{blue}{\textbf{ml}} command method \textcolor{blue}{\textbf{lf}}.
+			\end{block}
+		\end{frame}
+	% Section 4
+	\section{Exercise 4}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 4}
+			\begin{block}{Exercise 4}
+				Generate $100,000$ observations from the following logit model \textbf{DGP},
+				$y_{i} = 1$ if $\beta_{1} + \beta_{2}x_{i} > 0$ and $y_{i} = 0$ otherwise;
+				$(\beta_{1},\beta_{2}) = (0,1)$; $x_{i} \sim N(0,1)$
+				where $u_{i}$ is logistically distributed. Using the inverse transformation method,
+				you can compute a draw $u$ from the logistic distribution as $u = -\ln\left\{(1-r)/r\right\}$
+				, where $r$ is a draw from the uniform distribution. Use
+				data from this \textbf{DGP} to check the consistency of your estimation method in
+				\textbf{exercise 3} or, more simply, of the \textcolor{blue}{\textbf{logit}} command.
+			\end{block}
+		\end{frame}
+	% Section 4
+	\section{Exercise 5}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 5}
+			\begin{block}{Exercise 5}
+				Consider the \textbf{NLS} example in \textcolor{red!50}{\textbf{section 16.5.5}} with an exponential conditional
+				mean. Fit the model using the \textcolor{blue}{\textbf{ml}} command and the \textcolor{blue}{\textbf{lfnls}} program. Also, fit
+				the model using the \textcolor{blue}{\textbf{nl}} command, given in \textcolor{red!50}{\textbf{section 13.3.6}}. Verify that these
+				two methods give the same parameter estimates but, as noted in the text, the
+				robust standard errors differ.
+			\end{block}
+		\end{frame}
+	% Section 6
+	\section{Exercise 6}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 6}
+			\begin{block}{Exercise 6}
+				Continue the preceding exercise. Fit the model using the \textcolor{blue}{\textbf{ml}} command and the
+				\textcolor{blue}{\textbf{lfnls}} program with default standard errors. These implicitly assume that the
+				\textbf{NLS} model error has a variance of $\sigma^{2} = 1$. Obtain an estimate of 
+					\begin{equation}
+						s^{2} = \left(\dfrac{1}{N - K}\right) \sum\limits_{i} \left\{y_{i} - \exp\left(\mathbf{x}_{i}'\hat{\mathbf{\beta}}\right) \right\}^{2}
+					\end{equation}
+				, using the \textcolor{blue}{\textbf{predictnl}} postestimation
+				command to obtain $\exp\left(\mathbf{x}_{i}'\hat{\mathbf{\beta}}\right)$. Then, obtain an estimate of the \textbf{VCE} by
+				multiplying the stored result \textcolor{blue}{\textbf{e(V)}} by $s^{2}$. Obtain the standard error of $\hat{\beta}_{private}$,
+				and compare this with the standard error obtained when the \textbf{NLS} model is fit
+				using the \textcolor{blue}{\textbf{nl}} command with a default estimate of the \textbf{VCE}.
+			\end{block}
+		\end{frame}
+	% Section 7
+	\section{Exercise 7}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 7}
+			\begin{block}{Exercise 7}
+				Consider a Poisson regression of \textcolor{blue}{\textbf{docvis}} on the regressors \textcolor{blue}{\textbf{private}}, \textcolor{blue}{\textbf{chronic}},
+				\textcolor{blue}{\textbf{female}}, and \textcolor{blue}{\textbf{income}} and the programs given in \textcolor{red!50}{\textbf{section 16.7}}. Run the \textcolor{blue}{\textbf{ml
+			    model d0 d0pois}} command, and confirm that you get the same output as
+				produced by the code in \textcolor{red!50}{\textbf{section 16.7.3}}. Confirm that the nonrobust standard
+				errors are the same as those obtained using \textcolor{blue}{\textbf{poisson}} with default standard
+				errors. Run \textcolor{blue}{\textbf{ml model d1 d1pois}}, and confirm that you get the same output as
+				produced by the code in \textcolor{red!50}{\textbf{section 16.7.3}}. Run \textcolor{blue}{\textbf{ml model d2 d2pois}}, and confirm
+				that you get the same output as that given in \textcolor{red!50}{\textbf{section 16.7.3}}.
+			\end{block}
+		\end{frame}
+	% Section 8
+	\section{Exercise 8}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 8}
+			\begin{block}{Exercise 8}
+				Adapt the code of \textcolor{red!50}{\textbf{section 16.7.3}} to fit the logit model of exercise 1 by using
+				\textcolor{blue}{\textbf{ml}} command method \textcolor{blue}{\textbf{d0}}.
+			\end{block}
+		\end{frame}
+	% Section 9
+	\section{Exercise 9}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 9}
+			\begin{block}{Exercise 9}
+				Adapt the code of \textcolor{red!50}{\textbf{section 16.7.2}} to fit the logit model of exercise 1 by using
+				\textcolor{blue}{\textbf{ml}} command method \textcolor{blue}{\textbf{lf1}} with robust standard errors reported.
+			\end{block}
+		\end{frame}
+	% Section 10
+	\section{Exercise 10}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 10}
+			\begin{block}{Exercise 10}
+				Adapt the code of \textcolor{red!50}{\textbf{section 16.7.3}} to fit the logit model of exercise 1 by using
+				\textcolor{blue}{\textbf{ml}} command method \textcolor{blue}{\textbf{d2}}.
+			\end{block}
+		\end{frame}
+	% Section 11
+	\section{Exercise 11}
+		% Slide 1
+		\begin{frame}
+			\frametitle{Exercise 11}
+			\begin{block}{Exercise 11}
+				Consider the negative binomial example given in \textcolor{red!50}{\textbf{section 16.5.4}}. Fit this same
+				model by using the \textcolor{blue}{\textbf{ml}} command method \textcolor{blue}{\textbf{d0}}. Hint: See the Weibull example
+				in $[R]$ \textbf{ml}.
+			\end{block}
+		\end{frame}
 	% References
 	\begin{frame}[t,allowframebreaks]
 		\frametitle{References}
