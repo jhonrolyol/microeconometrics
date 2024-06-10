@@ -85,7 +85,56 @@
 		\begin{frame}
 			\frametitle{Exercise 4}
 			\begin{block}{Exercise 4}
-				a
+				Fit the model in \textcolor{red!50}{section 3.6}, and perform the standard Lagrange
+				multiplier test for heteroskedasticity by using \textcolor{blue}{\textbf{estat hettest}} with
+				$\mathbf{z} = \mathbf{x}$. Then, implement the test manually as $0.5$ times the explained
+				sum of squares from the regression of $y_{i}^{*}$ on an intercept and $z_{i}$, where
+					\begin{equation}
+						y_{i}^{*} = \left\{\dfrac{\hat{u}_{i}^{2}}{\dfrac{1}{N}\sum_{j} \hat{u}_{j}^{2}  } \right\} - 1
+					\end{equation}
+				and $\hat{u}_{i}$ is the residual from the original \textbf{OLS regression}. Next, use \textcolor{blue}{\textbf{estat hettest}} with the iid option, and
+				show that this test is obtained as  $N\times R^{2}$, where $R^{2}$ is obtained from
+				the regression of $\hat{u}_{i}^{2}$ on an intercept and $\mathbf{z}_{i}$.
+			\end{block}
+		\end{frame}
+	% Section 5
+	\section{Exercise 5}
+		% Slide 5.1
+		\begin{frame}
+			\frametitle{Exercise 5}
+			\begin{block}{Exercise 5}
+				Using the \textbf{DGP} of \textcolor{red!50}{\textbf{section 3.7.6}}, generate a sample of size $100$. Regress 
+				$y$ on $x$ and an intercept. Apply the \textbf{RESET} omitted variable test. Does
+				the test indicate functional form misspecification? Next, use the \textcolor{blue}{\textbf{estat}}
+				\textcolor{blue}{\textbf{imtest}} postestimation command to generate \textbf{IM} omnibus diagnostic
+				test statistics. If you had applied only this test, what changes to your
+				model specification would you make? Would you make additional
+				tests before changing the model specification?
+			\end{block}
+		\end{frame}
+	% Section 6
+	\section{Exercise 6}
+		% Slide 6.1
+		\begin{frame}
+			\frametitle{Exercise 6}
+			\begin{block}{Exercise 6}
+				One type of data transformation that is sometimes used in linear
+				regression, though not much in econometrics, is variable
+				standardization. To standardize a variable you subtract the sample
+				mean of that variable from each observation and divide the result by
+				the sample standard deviation of that variable. The resulting variable
+				with mean zero and standard deviation one is independent of the
+				measurement scale of original data. A standardized regression is a
+				regression in which the dependent and regressor variables are all
+				standardized before running the regression. The standardized
+				regression coefficients are interpreted as measuring the effect of one
+				standard deviation change in the regressor and hence are in a sense
+				comparable across variables. Note that when a regressor is discrete,
+				interpreting its impact in units of standard deviation is not natural.
+				Reestimate the regression equation of \textcolor{red!50}{\textbf{section 3.5.2}} after standardizing
+				all variables. Are the insignificant coefficients the same as those in the
+				previous regression? Which variable has the largest coefficient? Does
+				that mean it is the most important variable in the regression?
 			\end{block}
 		\end{frame}
 	% References
