@@ -4,11 +4,11 @@
                                  VOLUME I
                Cross-Sectional and Panel Regression Methods	
 							 
-												 DATA MANAGEMENT AND GRAPHICS
+                       DATA MANAGEMENT AND GRAPHICS
                      ....................................
 
-							              Jhon R. Ordoñez
-                       (rolyordonezleon@gmail.com)
+                            Jhon R. Ordoñez
+                      (rolyordonezleon@gmail.com)
 											 
 ==============================================================================*/
 
@@ -28,15 +28,15 @@
 	cap !mkdir 5.clean_data
 	cap !mkdir 6.results
              cap !mkdir "6.results/6.1.tables"
-						 cap !mkdir "6.results/6.2.figures"
+             cap !mkdir "6.results/6.2.figures"
              cap !mkdir "6.results/6.3.log_files"
 	global dofiles "${root}/2.dofiles"
 	global raw     "${root}/3.raw_data"
 	global clean   "${root}/5.clean_data"
 	global results "${root}/6.results"
-         global tables "${results}/6.1.tables"
-				 global figures "${results}/6.2.figures"
-			   global logfiles "${results}/6.3.log_files"
+    global tables "${results}/6.1.tables"
+    global figures "${results}/6.2.figures"
+    global logfiles "${results}/6.3.log_files"
 * Solution of the exercises
 	do "${dofiles}/exercise1.do"
 	do "${dofiles}/exercise2.do"
