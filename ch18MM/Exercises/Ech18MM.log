@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.11.25) (preloaded format=pdflatex 2023.9.17)  21 MAY 2024 03:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.11.25) (preloaded format=pdflatex 2023.9.17)  10 JUN 2024 14:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1255,7 +1255,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  26945 strings out of 475284
  547107 string characters out of 2775521
- 935541 words of memory out of 3000000
+ 935542 words of memory out of 3000000
  47818 multiletter control sequences out of 15000+600000
  503622 words of font info for 115 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1270,7 +1270,7 @@ c/amsfonts/cm/cmss8.pfb><C:/Users/PC/AppData/Local/Programs/MiKTeX/fonts/type1/
 public/amsfonts/cm/cmss9.pfb><C:/Users/PC/AppData/Local/Programs/MiKTeX/fonts/t
 ype1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/PC/AppData/Local/Programs/MiKTeX
 /fonts/type1/urw/times/utmr8a.pfb>
-Output written on Ech18MM.pdf (14 pages, 120842 bytes).
+Output written on Ech18MM.pdf (14 pages, 120578 bytes).
 PDF statistics:
  177 PDF objects out of 1000 (max. 8388607)
  39 named destinations out of 1000 (max. 500000)
